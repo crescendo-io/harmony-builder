@@ -23,9 +23,9 @@
             "ui_off_text": ""
         },
         {
-            "key": "field_65d32fca46646",
+            "key": "field_65d383e28434f",
             "label": "Fond du composant",
-            "name": "composant_color",
+            "name": "composant_background",
             "aria-label": "",
             "type": "color_picker",
             "instructions": "",
@@ -49,11 +49,160 @@
             "return_format": "string"
         },
         {
+            "key": "field_65d38700d391b",
+            "label": "Ajouter une séparation dans le background",
+            "name": "background_cut",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_65d33080d0108",
+                        "operator": "==",
+                        "value": "1"
+                    },
+                    {
+                        "field": "field_65d383e28434f",
+                        "operator": "!=empty"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_65d387740391b",
+            "label": "Couleur de la séparation",
+            "name": "composant_background_cut",
+            "aria-label": "",
+            "type": "color_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_65d33080d0108",
+                        "operator": "==",
+                        "value": "1"
+                    },
+                    {
+                        "field": "field_65d383e28434f",
+                        "operator": "!=empty"
+                    },
+                    {
+                        "field": "field_65d38700d391b",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "enable_opacity": 0,
+            "return_format": "string"
+        },
+        {
+            "key": "field_65d389fb0391e",
+            "label": "Positionnement de la séparation",
+            "name": "composant_background_cut_position",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_65d33080d0108",
+                        "operator": "==",
+                        "value": "1"
+                    },
+                    {
+                        "field": "field_65d383e28434f",
+                        "operator": "!=empty"
+                    },
+                    {
+                        "field": "field_65d38700d391b",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "top": "Coupé par le haut",
+                "bottom": "Coupé par le bas"
+            },
+            "default_value": false,
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 0,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_65d38c4e0391f",
+            "label": "% en hauteur de la séparation",
+            "name": "composant_background_cut_purcent",
+            "aria-label": "",
+            "type": "number",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_65d33080d0108",
+                        "operator": "==",
+                        "value": "1"
+                    },
+                    {
+                        "field": "field_65d383e28434f",
+                        "operator": "!=empty"
+                    },
+                    {
+                        "field": "field_65d38700d391b",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "min": "",
+            "max": "",
+            "placeholder": "",
+            "step": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
             "key": "field_65d3301146647",
             "label": "Marge du composant",
             "name": "composant_marge",
             "aria-label": "",
-            "type": "text",
+            "type": "select",
             "instructions": "",
             "required": 0,
             "conditional_logic": [
@@ -70,11 +219,45 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": "",
-            "maxlength": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": ""
+            "choices": {
+                "big": "Grande",
+                "small": "Petite"
+            },
+            "default_value": false,
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 0,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_65d3840c84350",
+            "label": "Passer les écritures en blanc",
+            "name": "composant_white_mode",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_65d33080d0108",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
         }
     ],
     "location": [
@@ -95,5 +278,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1708339438
+    "modified": 1708363040
 }

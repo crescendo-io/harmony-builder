@@ -345,9 +345,61 @@
                     "min": "",
                     "max": ""
                 },
+                "layout_65d3856049b8d": {
+                    "key": "layout_65d3856049b8d",
+                    "name": "text_only",
+                    "label": "Texte",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_65d3856049b8f",
+                            "label": "Texte",
+                            "name": "text",
+                            "aria-label": "",
+                            "type": "wysiwyg",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "tabs": "all",
+                            "toolbar": "full",
+                            "media_upload": 1,
+                            "delay": 0
+                        },
+                        {
+                            "key": "field_65d3856049b93",
+                            "label": "Paramètres avancés",
+                            "name": "parameters",
+                            "aria-label": "",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_65d32fcaa80d1"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
                 "layout_65d352d1a961d": {
                     "key": "layout_65d352d1a961d",
-                    "name": "text_only",
+                    "name": "text_two_cols",
                     "label": "Texte 2 colonnes",
                     "display": "block",
                     "sub_fields": [
@@ -1432,5 +1484,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1708355788
+    "modified": 1708361168
 }
