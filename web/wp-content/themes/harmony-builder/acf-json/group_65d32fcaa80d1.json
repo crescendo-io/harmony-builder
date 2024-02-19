@@ -5,7 +5,7 @@
         {
             "key": "field_65d33080d0108",
             "label": "Ajouter Des Paramètres avancés",
-            "name": "ajouter_des_parametres_avances",
+            "name": "params",
             "aria-label": "",
             "type": "true_false",
             "instructions": "",
@@ -278,5 +278,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1708363040
+    "modified": 1708365868
 }

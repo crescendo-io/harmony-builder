@@ -1,17 +1,18 @@
 <?php
-/**
- * The template for displaying all pages
- *
- * This is the template that displays all pages by default.
- * Please note that this is the WordPress construct of pages
- * and that other 'pages' on your WordPress site may use a
- * different template.
- *
- * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
- *
- */
 get_header();
-get_header('nav');
+
+?>
+
+
+<?php
+if( have_rows('page') ):
+    while ( have_rows('page') ) : the_row();
+        var_dump(get_row_layout());
+        get_template_part('template-parts/strates', get_row_layout());
+    endwhile;
+endif;
+
+
 ?>
     <main id="main" class="main">
         <?php

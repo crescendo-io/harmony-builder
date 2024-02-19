@@ -57,3 +57,36 @@ function scripts_site(){
         wp_localize_script('script-js', 'ParamsData', $dataToBePassed);
     }
 }
+
+function get_custom_thumb($id="", $size=""){
+    $datas = [];
+
+    if($id){
+        $imageURL = wp_get_attachment_image_src($id, $size);
+        $attachement = get_post_meta($id, '_wp_attachment_image_alt', TRUE);
+
+        if($imageURL){
+            $datas['url'] = reset($imageURL);
+        }
+        if($attachement){
+            $datas['attachement'] = $attachement;
+        }
+    }
+
+    return $datas;
+}
+
+
+function get_advanced_fields(){
+    $datas['params']                                = get_sub_field('params');
+    $datas['composant_background']                  = get_sub_field('composant_background');
+    $datas['background_cut_enable']                 = get_sub_field('background_cut');
+    $datas['background_cut_color']                  = get_sub_field('composant_background_cut');
+    $datas['composant_background_cut_position']     = get_sub_field('composant_background_cut_position');
+    $datas['composant_background_cut_purcent']      = get_sub_field('composant_background_cut_purcent');
+    $datas['composant_marge']                       = get_sub_field('composant_marge');
+    $datas['composant_white_mode']                  = get_sub_field('composant_white_mode');
+
+    return $datas;
+}
+
