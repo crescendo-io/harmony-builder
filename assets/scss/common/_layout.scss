@@ -1,0 +1,32 @@
+
+
+.strate{
+  padding: 2.5vw 0;
+  position: relative;
+
+  &.marge-small{
+    padding: 15px 0;
+  }
+  .background-cut{
+    position: absolute;
+    width: 100%;
+    top: 0;
+    height: 40%;
+    left: 0;
+
+    &.bottom{
+      bottom: 0;
+      top: auto;
+    }
+
+    &.top{
+      top: 0;
+    }
+  }
+}
+
+
+.white{
+  color: #FFF;
+}
+

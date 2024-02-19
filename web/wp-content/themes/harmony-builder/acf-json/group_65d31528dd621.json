@@ -372,6 +372,33 @@
                             "delay": 0
                         },
                         {
+                            "key": "field_65d3c716cfc89",
+                            "label": "Positionnement",
+                            "name": "position",
+                            "aria-label": "",
+                            "type": "select",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "left": "Aligné à gauche",
+                                "center": "Centré",
+                                "right": "Aligné à droite"
+                            },
+                            "default_value": "left",
+                            "return_format": "value",
+                            "multiple": 0,
+                            "allow_null": 0,
+                            "ui": 0,
+                            "ajax": 0,
+                            "placeholder": ""
+                        },
+                        {
                             "key": "field_65d3856049b93",
                             "label": "Paramètres avancés",
                             "name": "parameters",
@@ -1208,6 +1235,28 @@
                             "ui": 0,
                             "ajax": 0,
                             "placeholder": ""
+                        },
+                        {
+                            "key": "field_65d3d1c6a0d48",
+                            "label": "Paramètres avancés",
+                            "name": "parameters",
+                            "aria-label": "",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_65d32fcaa80d1"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
                         }
                     ],
                     "min": "",
@@ -1459,6 +1508,56 @@
                     ],
                     "min": "",
                     "max": ""
+                },
+                "layout_65d3c5a839e33": {
+                    "key": "layout_65d3c5a839e33",
+                    "name": "add_marge",
+                    "label": "Ajout de marge",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_65d3c5b239e35",
+                            "label": "Information",
+                            "name": "",
+                            "aria-label": "",
+                            "type": "message",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "Ici une marge est ajoutée",
+                            "new_lines": "wpautop",
+                            "esc_html": 0
+                        },
+                        {
+                            "key": "field_65d3c6549a9dc",
+                            "label": "Paramètres avancés",
+                            "name": "parameters",
+                            "aria-label": "",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_65d32fcaa80d1"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
                 }
             },
             "min": "",
@@ -1484,5 +1583,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1708361168
+    "modified": 1708380656
 }

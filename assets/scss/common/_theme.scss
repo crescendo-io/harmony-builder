@@ -1,0 +1,58 @@
+p{
+  font-size: 18px;
+}
+
+h3{
+  font-size: 5vw;
+  line-height: 5vw;
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+h2{
+  font-size: 8vw;
+  line-height: 7vw;
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+h4{
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.5vw;
+}
+
+h1{
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+.container{
+  max-width: 1400px;
+  width: 90%;
+}
+
+.button{
+  display: inline-block;
+  padding: 15px 40px;
+  background: #000;
+  font-size: 14px;
+  color: #FFF;
+  text-transform: uppercase;
+
+  &.primary{
+    background: #000;
+  }
+  &.secondary{
+    background: #888;
+  }
+}
+
+.white{
+  color: #FFF;
+}
+

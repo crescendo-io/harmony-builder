@@ -1,12 +1,8 @@
 <?php
-    $iframe = get_sub_field('iframe');
-
     $advanced = get_advanced_fields();
-    // Need params
 ?>
 
-
-<div class="strate container-iframe <?= ($advanced['composant_white_mode']) ? 'white' : ''; ?> <?= ($advanced['composant_marge'] == 'small') ? 'marge-small' : ''; ?>"
+<div class="strate marge <?= ($advanced['composant_marge'] == 'small') ? 'marge-small' : ''; ?>"
     <?php if($advanced['params'] && $advanced['composant_background']): ?>
         style="background: <?= ($advanced['composant_background'])? $advanced['composant_background'] : ''; ?>;"
     <?php endif; ?>>
@@ -19,12 +15,4 @@
                  "
         ></div>
     <?php endif; ?>
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-12">
-                <?= $iframe; ?>
-            </div>
-        </div>
-    </div>
 </div>
-

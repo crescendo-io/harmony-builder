@@ -59,7 +59,8 @@ function scripts_site(){
 }
 
 function get_custom_thumb($id="", $size=""){
-    $datas = [];
+    $datas['url'] = '';
+    $datas['alt'] = '';
 
     if($id){
         $imageURL = wp_get_attachment_image_src($id, $size);
@@ -69,7 +70,7 @@ function get_custom_thumb($id="", $size=""){
             $datas['url'] = reset($imageURL);
         }
         if($attachement){
-            $datas['attachement'] = $attachement;
+            $datas['alt'] = $attachement;
         }
     }
 

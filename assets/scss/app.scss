@@ -2,16 +2,29 @@
 @import 'utils/print';
 @import 'utils/reset';
 @import 'utils/wordpress';
+@import 'common/bootstrap';
 
 @import 'styles/buttons';
 @import 'styles/fonts';
 @import 'styles/variables';
+
 
 @import 'modules/rgpd';
 
 @import 'common/layout';
 @import 'common/header';
 @import 'common/footer';
+
+// Strates
+@import 'strates/iframe';
+@import 'strates/image_full';
+@import 'strates/image_text';
+@import 'strates/page_introduction';
+@import 'strates/text_only';
+@import 'strates/add_marge';
+
+
+@import 'common/theme';
 
 /*@import 'components/';*/
 /*@import 'pages/';*/

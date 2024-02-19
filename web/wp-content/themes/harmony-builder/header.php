@@ -56,6 +56,11 @@
     <meta name="twitter:title" content="<?php wp_title(''); ?>">
     <meta name="twitter:description" content="<?php bloginfo('description'); ?>">
     <meta name="twitter:image" content="<?php echo get_template_directory_uri(); ?>/assets/img/twitter.jpg">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+
     
     <?php wp_head(); ?>
 </head>

@@ -1,0 +1,26 @@
+.container-text-only{
+  p{
+    max-width: 70%;
+    display: inline-block;
+
+  }
+
+  &.left{
+    text-align: left;
+    p, h1, h2, h3, h4, h5{
+      text-align: left !important;
+    }
+  }
+  &.center{
+    text-align: center;
+    p, h1, h2, h3, h4, h5{
+      text-align: center !important;
+    }
+  }
+  &.right{
+    text-align: right;
+    p, h1, h2, h3, h4, h5{
+      text-align: right !important;
+    }
+  }
+}

@@ -1,0 +1,17 @@
+.container-image-text{
+  .image-strate{
+    width: 70%;
+    margin: 0 auto;
+    display: block;
+  }
+
+  .text-content{
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+
+    p{
+      max-width: 70%;
+    }
+  }
+}
