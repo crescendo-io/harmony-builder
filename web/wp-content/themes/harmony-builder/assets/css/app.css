@@ -9738,6 +9738,17 @@ a.text-dark:focus, a.text-dark:hover {
     top: 0;
 }
 
+.center {
+    text-align: center;
+}
+
+.container-buttons {
+    margin-top: 30px;
+}
+.container-buttons a {
+    margin-right: 15px;
+}
+
 .white {
     color: #FFF;
 }
@@ -9762,7 +9773,7 @@ a.text-dark:focus, a.text-dark:hover {
     transform: translateY(-50%);
 }
 .container-image-text .text-content p {
-    max-width: 70%;
+    max-width: 100%;
 }
 
 .strate-hero {
@@ -9774,7 +9785,7 @@ a.text-dark:focus, a.text-dark:hover {
     margin-top: 45px;
 }
 .strate-hero .container-buttons .button {
-    margin: 0 15px;
+    margin: 0 7px;
 }
 .strate-hero .scroll-bottom {
     position: absolute;
@@ -9849,6 +9860,104 @@ a.text-dark:focus, a.text-dark:hover {
     text-align: right !important;
 }
 
+.container-text-only.right a {
+    margin-left: 15px;
+    margin-right: 0;
+}
+
+.container-picto {
+    padding: 15px;
+}
+.container-picto img {
+    width: 100px;
+}
+.container-picto .picto-title {
+    padding-top: 20px;
+    font-size: 25px;
+}
+
+.accordeon .accordeon-item-title {
+    font-size: 4vw;
+    padding: 35px 0 30px;
+    position: relative;
+}
+.accordeon .accordeon-item-title:after {
+    content: "";
+    width: 25px;
+    height: 25px;
+    background: url(/wp-content/themes/harmony-builder/assets/img/icons/drop-down.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    top: 50%;
+    transform: translateY(-50%);
+    position: absolute;
+    right: 0;
+}
+.accordeon .accordeon-item-title h3 {
+    font-size: 3.5vw;
+    line-height: 4vw;
+    margin: 0;
+}
+.accordeon .accordeon-item-text {
+    padding-bottom: 30px;
+    max-width: 80%;
+    position: relative;
+    display: none;
+}
+.accordeon .accordeon-item {
+    border-bottom: 1px solid #777;
+}
+.accordeon .accordeon-item:first-child {
+    border-top: 1px solid #777;
+}
+.accordeon .accordeon-item.is-open .accordeon-item-text {
+    display: block !important;
+}
+
+.card-pricing {
+    border: 1px solid #222;
+    padding: 30px;
+    margin-bottom: 30px;
+}
+.card-pricing .title-pricing {
+    font-size: 25px;
+    line-height: 30px;
+    margin-bottom: 15px;
+}
+.card-pricing .description-pricing {
+    min-height: 250px;
+}
+.card-pricing .price {
+    font-size: 25px;
+}
+
+.container-image-on-text {
+    position: relative;
+    padding: 150px 0;
+}
+.container-image-on-text.img-dark:after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.container-image-on-text img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    top: 0;
+    left: 0;
+}
+.container-image-on-text .containter-text {
+    position: relative;
+    z-index: 3;
+}
+
 p {
     font-size: 18px;
 }
@@ -9868,18 +9977,34 @@ h2 {
     font-weight: 400;
     font-style: normal;
 }
+h2.normal {
+    font-size: 4vw;
+    line-height: 5vw;
+}
+h2.big {
+    font-size: 8vw;
+    line-height: 7vw;
+}
+h2.small {
+    font-size: 2vw;
+    line-height: 3vw;
+}
 
 h4 {
     font-family: "Bebas Neue", sans-serif;
     font-weight: 400;
     font-style: normal;
-    font-size: 1.5vw;
+    font-size: 3vw;
 }
 
 h1 {
     font-family: "Bebas Neue", sans-serif;
     font-weight: 400;
     font-style: normal;
+}
+
+h5 {
+    font-family: "Bebas Neue", sans-serif;
 }
 
 .container {
@@ -9904,6 +10029,19 @@ h1 {
 
 .white {
     color: #FFF;
+}
+
+.strate-hero h4 {
+    font-size: 3vw;
+}
+
+.card-pricing .title-pricing {
+    font-family: "Bebas Neue", sans-serif;
+}
+
+.white .button {
+    background: #FFF;
+    color: #000;
 }
 
 /*@import 'components/';*/

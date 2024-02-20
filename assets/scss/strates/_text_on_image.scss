@@ -1,0 +1,30 @@
+.container-image-on-text{
+  position: relative;
+  padding: 150px 0;
+
+  &.img-dark{
+    &:after{
+      content: '';
+      width: 100%;
+      height: 100%;
+      background: rgba(#000, .6);
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+  }
+
+  img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    top: 0;
+    left: 0;
+  }
+
+  .containter-text{
+    position: relative;
+    z-index: 3;
+  }
+}

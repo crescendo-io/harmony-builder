@@ -233,7 +233,7 @@
         },
         {
             "key": "field_65d3840c84350",
-            "label": "Passer les écritures en blanc",
+            "label": "Passer les typos en blanc",
             "name": "composant_white_mode",
             "aria-label": "",
             "type": "true_false",
@@ -278,5 +278,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1708365868
+    "modified": 1708463556
 }

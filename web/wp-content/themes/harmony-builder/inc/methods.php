@@ -17,12 +17,30 @@ function dateMonthInFr($date) {
 }
 
 
-function lsdGetTemplatePart($folder = '', $slug, $name, $args = '') {
+function get_class_strate($advanced) {
+    $class = '';
+    if($advanced['composant_white_mode']){
+        $class .= "white";
+    }if($advanced['composant_marge'] == "small"){
+        $class .= " marge-small";
+    }
+    return $class;
+}
 
-    if (!empty($args)) {
-        set_query_var('args', $args);
+function get_background_strate($advanced) {
+    $background = '';
+    if($advanced['params'] && $advanced['composant_background']){
+        $background = "style='background: " . $advanced['composant_background'] . "'";
+    }
+    return $background;
+}
+
+function get_background_cut($advanced) {
+    $backgroundCut = '';
+
+    if($advanced['background_cut_enable'] && $advanced['background_cut_color']){
+        $backgroundCut = '<div class="background-cut ' . $advanced['composant_background_cut_position'] . '" style="background-color: ' . $advanced['background_cut_color'] .'; height: '. $advanced['composant_background_cut_purcent'] . '%;"></div>';
     }
 
-    get_template_part('template-parts/'. $folder . '/' .  $slug .'', $name, $args);
-
+    return $backgroundCut;
 }

@@ -28,20 +28,7 @@
             <?= $page_introduction_text; ?>
         </h4>
 
-        <?php if($page_introduction_buttons): ?>
-            <div class="container-buttons">
-                <?php if($page_introduction_button_1): ;?>
-                    <a href="<?= $page_introduction_button_1['url']; ?>" target="<?= $page_introduction_button_1['target']; ?>" class="button primary">
-                        <?= $page_introduction_button_1['title']; ?>
-                    </a>
-                <?php endif; ?>
-                <?php if($page_introduction_button_2): ;?>
-                    <a href="<?= $page_introduction_button_2['url']; ?>" target="<?= $page_introduction_button_2['target']; ?>" class="button secondary">
-                        <?= $page_introduction_button_2['title']; ?>
-                    </a>
-                <?php endif; ?>
-            </div>
-        <?php endif; ?>
+        <?= get_template_part('template-parts/general/bloc-button'); ?>
 
     </div>
 

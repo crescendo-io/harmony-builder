@@ -1,0 +1,47 @@
+.accordeon{
+  .accordeon-item-title{
+    font-size: 4vw;
+    padding: 35px 0 30px;
+    position: relative;
+    &:after{
+      content: "";
+      width: 25px;
+      height: 25px;
+      background: url('../img/icons/drop-down.svg');
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      top: 50%;
+      transform: translateY(-50%);
+      position: absolute;
+      right: 0;
+    }
+
+    h3{
+      font-size: 3.5vw;
+      line-height: 4vw;
+      margin: 0;
+    }
+  }
+
+  .accordeon-item-text{
+    padding-bottom: 30px;
+    //display: none;
+    max-width: 80%;
+    position: relative;
+    display: none;
+  }
+  .accordeon-item{
+    border-bottom: 1px solid #777;
+
+    &:first-child{
+      border-top: 1px solid #777;
+    }
+  }
+
+  .accordeon-item.is-open{
+    .accordeon-item-text{
+      display: block !important;
+    }
+  }
+}

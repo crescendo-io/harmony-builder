@@ -1,0 +1,19 @@
+.card-pricing{
+  border: 1px solid #222;
+  padding: 30px;
+  margin-bottom: 30px;
+
+  .title-pricing{
+    font-size: 25px;
+    line-height: 30px;
+    margin-bottom: 15px;
+  }
+
+  .description-pricing{
+    min-height: 250px;
+  }
+
+  .price{
+    font-size: 25px;
+  }
+}

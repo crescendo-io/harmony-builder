@@ -1,5 +1,4 @@
 
-
 .strate{
   padding: 2.5vw 0;
   position: relative;
@@ -22,6 +21,19 @@
     &.top{
       top: 0;
     }
+  }
+}
+
+.center{
+  text-align: center;
+}
+
+
+.container-buttons {
+  margin-top: 30px;
+
+  a{
+    margin-right: 15px;
   }
 }
 
