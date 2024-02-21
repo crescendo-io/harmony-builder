@@ -67,3 +67,8 @@
 
 <body <?php body_class(); ?> data-module="bugReport">
 
+<?php
+    $optionMenu = get_field('option_menu_style', 'option');
+
+    get_template_part('template-parts/header/' . $optionMenu);
+?>
