@@ -10135,14 +10135,17 @@ header.burger.is-scrolled .logo-scroll {
     transform: translateY(-50%);
 }
 
-p {
-    font-size: 18px;
+h3, h2, h4, h1, h5,
+.card-pricing .title-pricing,
+footer p,
+.fake-link,
+header.burger .button-menu,
+.menu-navigation ul li a,
+.button {
+    font-family: "Bebas Neue", sans-serif;
 }
 
-h3 {
-    font-size: 5vw;
-    line-height: 5vw;
-    font-family: "Bebas Neue", sans-serif;
+h1 {
     font-weight: 400;
     font-style: normal;
 }
@@ -10150,9 +10153,6 @@ h3 {
 h2 {
     font-size: 8vw;
     line-height: 7vw;
-    font-family: "Bebas Neue", sans-serif;
-    font-weight: 400;
-    font-style: normal;
 }
 h2.normal {
     font-size: 4vw;
@@ -10167,21 +10167,19 @@ h2.small {
     line-height: 3vw;
 }
 
+h3 {
+    font-size: 5vw;
+    line-height: 5vw;
+}
+
 h4 {
-    font-family: "Bebas Neue", sans-serif;
     font-weight: 400;
     font-style: normal;
     font-size: 3vw;
 }
 
-h1 {
-    font-family: "Bebas Neue", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-}
-
-h5 {
-    font-family: "Bebas Neue", sans-serif;
+p {
+    font-size: 18px;
 }
 
 .container {
@@ -10193,9 +10191,11 @@ h5 {
     display: inline-block;
     padding: 15px 40px;
     background: #000;
-    font-size: 14px;
     color: #FFF;
     text-transform: uppercase;
+    font-size: 20px;
+    border: 2px solid #000;
+    transition: 0.3s;
 }
 .button.primary {
     background: #000;
@@ -10203,31 +10203,24 @@ h5 {
 .button.secondary {
     background: #888;
 }
+.button:hover {
+    background: #FFF;
+    color: #000;
+    text-decoration: none;
+}
 
-.white {
-    color: #FFF;
+.white .button {
+    background: #FFF;
+    color: #000;
+    border: 0;
 }
 
 .strate-hero h4 {
     font-size: 3vw;
 }
 
-.card-pricing .title-pricing {
-    font-family: "Bebas Neue", sans-serif;
-}
-
-.fake-link {
-    font-family: "Bebas Neue", sans-serif;
-}
-
-.white .button {
-    background: #FFF;
-    color: #000;
-}
-
 header.burger .button-menu .text {
     color: #FFF;
-    font-family: "Bebas Neue", sans-serif;
     position: relative;
     top: 7px;
     font-size: 25px;
@@ -10237,9 +10230,6 @@ header.burger .button-menu .barre {
     background: #FFF;
 }
 
-.menu-navigation ul li a {
-    font-family: "Bebas Neue", sans-serif;
-}
 .menu-navigation ul li ul li a {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
@@ -10279,7 +10269,6 @@ footer {
     border-top: 2px solid #000;
 }
 footer p {
-    font-family: "Bebas Neue", sans-serif;
     color: #FFF;
     font-size: 18px;
 }
@@ -10307,22 +10296,6 @@ footer .social {
 }
 footer .social svg path {
     fill: #fff !important;
-}
-
-.button {
-    font-family: "Bebas Neue", sans-serif;
-    font-size: 20px;
-    border: 2px solid #000;
-    transition: 0.3s;
-}
-.button:hover {
-    background: #FFF;
-    color: #000;
-    text-decoration: none;
-}
-
-.white .button {
-    border: 0;
 }
 
 /*@import 'components/';*/

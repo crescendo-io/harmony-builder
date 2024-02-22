@@ -1,20 +1,22 @@
-p{
-  font-size: 18px;
+// Typos
+h3, h2, h4, h1, h5,
+.card-pricing .title-pricing,
+footer p,
+.fake-link,
+header.burger .button-menu,
+.menu-navigation ul li a,
+.button{
+  font-family: "Bebas Neue", sans-serif;
 }
 
-h3{
-  font-size: 5vw;
-  line-height: 5vw;
-  font-family: "Bebas Neue", sans-serif;
+h1{
   font-weight: 400;
   font-style: normal;
 }
+
 h2{
   font-size: 8vw;
   line-height: 7vw;
-  font-family: "Bebas Neue", sans-serif;
-  font-weight: 400;
-  font-style: normal;
 
   &.normal{
     font-size: 4vw;
@@ -30,35 +32,37 @@ h2{
   }
 }
 
+h3{
+  font-size: 5vw;
+  line-height: 5vw;
+}
+
 h4{
-  font-family: "Bebas Neue", sans-serif;
   font-weight: 400;
   font-style: normal;
   font-size: 3vw;
 }
 
-h1{
-  font-family: "Bebas Neue", sans-serif;
-  font-weight: 400;
-  font-style: normal;
+p{
+  font-size: 18px;
 }
 
-h5{
-  font-family: "Bebas Neue", sans-serif;
-}
-
+// Container
 .container{
   max-width: 1400px;
   width: 90%;
 }
 
+// Buttons
 .button{
   display: inline-block;
   padding: 15px 40px;
   background: #000;
-  font-size: 14px;
   color: #FFF;
   text-transform: uppercase;
+  font-size: 20px;
+  border: 2px solid #000;
+  transition: .3s;
 
   &.primary{
     background: #000;
@@ -66,38 +70,33 @@ h5{
   &.secondary{
     background: #888;
   }
-}
 
-.white{
-  color: #FFF;
-}
-
-.strate-hero{
-  h4{
-    font-size: 3vw;
+  &:hover{
+    background: #FFF;
+    color: #000;
+    text-decoration: none;
   }
-}
-
-.card-pricing .title-pricing {
-  font-family: "Bebas Neue", sans-serif;
-}
-
-.fake-link{
-  font-family: "Bebas Neue", sans-serif;
 }
 
 .white{
   .button{
     background: #FFF;
     color: #000;
+    border: 0;
   }
 }
 
+// Specifique
+.strate-hero{
+  h4{
+    font-size: 3vw;
+  }
+}
 
+// Hero
 header.burger .button-menu{
   .text{
     color: #FFF;
-    font-family: "Bebas Neue", sans-serif;
     position: relative;
     top: 7px;
     font-size: 25px;
@@ -111,10 +110,6 @@ header.burger .button-menu{
 .menu-navigation{
   ul{
     li{
-      a{
-        font-family: "Bebas Neue", sans-serif;
-      }
-
       ul{
         li{
           a{
@@ -125,7 +120,6 @@ header.burger .button-menu{
     }
   }
 }
-
 
 header.burger.is-scrolled{
   background: #FFF;
@@ -160,6 +154,8 @@ header.burger.is-scrolled{
   }
 }
 
+
+// Footer
 footer{
   padding: 40px 0;
   background: #000;
@@ -167,7 +163,6 @@ footer{
   border-top: 2px solid #000;
 
   p{
-    font-family: "Bebas Neue", sans-serif;
     color: #FFF;
     font-size: 18px;
   }
@@ -199,24 +194,5 @@ footer{
         fill: #fff !important;
       }
     }
-  }
-}
-
-.button{
-  font-family: "Bebas Neue", sans-serif;
-  font-size: 20px;
-  border: 2px solid #000;
-  transition: .3s;
-
-  &:hover{
-    background: #FFF;
-    color: #000;
-    text-decoration: none;
-  }
-}
-
-.white{
-  .button{
-    border: 0;
   }
 }
