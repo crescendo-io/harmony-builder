@@ -1,5 +1,12 @@
 <?php
-    $iframe = get_sub_field('iframe');
+
+    $iframe = '';
+
+    if(get_sub_field('iframe_html')){
+        $iframe = get_sub_field('iframe_html_data');
+    }else{
+        $iframe = get_sub_field('iframe');
+    }
 
     $advanced = get_advanced_fields();
     $classNames = get_class_strate($advanced);

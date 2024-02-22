@@ -1,0 +1,33 @@
+.container-pushs-article{
+  color: inherit;
+  margin-bottom: 30px;
+  display: block;
+
+  &:hover{
+    color: inherit;
+    text-decoration: none;
+  }
+  .pushs-article-image{
+    width: 100%;
+    transition: .4s;
+  }
+
+  .pushs-article-title{
+    font-size: 30px;
+    margin-bottom: 5px;
+    margin-top: 20px;
+    display: block;
+  }
+
+  &:hover{
+    .pushs-article-image{
+      transform: scale(.95);
+    }
+  }
+
+  .fake-link{
+    font-size: 18px;
+    text-decoration: underline;
+  }
+
+}

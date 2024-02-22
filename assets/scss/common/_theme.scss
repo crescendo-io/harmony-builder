@@ -82,6 +82,10 @@ h5{
   font-family: "Bebas Neue", sans-serif;
 }
 
+.fake-link{
+  font-family: "Bebas Neue", sans-serif;
+}
+
 .white{
   .button{
     background: #FFF;
@@ -119,5 +123,100 @@ header.burger .button-menu{
         }
       }
     }
+  }
+}
+
+
+header.burger.is-scrolled{
+  background: #FFF;
+  border-bottom: 2px solid #000;
+  .barre{
+    background: #000;
+
+    &:before, &:after{
+      background: #000;
+    }
+  }
+  .button-menu{
+    padding: 15px 30px;
+
+    .text{
+      color: #000;
+    }
+  }
+
+  .logo-scroll{
+    width: 45px;
+    margin-top: 13px;
+  }
+  .social{
+    padding: 30px 30px 27px;
+    margin-bottom: 0;
+    svg{
+      path{
+        fill: #000 !important;
+      }
+    }
+  }
+}
+
+footer{
+  padding: 40px 0;
+  background: #000;
+  margin-top: 40px;
+  border-top: 2px solid #000;
+
+  p{
+    font-family: "Bebas Neue", sans-serif;
+    color: #FFF;
+    font-size: 18px;
+  }
+  .copyright{
+    color: #FFF;
+    padding-top: 60px;
+    font-size: 12px;
+    a{
+      color: #FFF;
+      text-decoration: underline;
+    }
+  }
+  .logo-footer{
+    max-width: 60px;
+  }
+  .menu{
+    li{
+      margin-bottom: 5px;
+      a{
+        color: #fff;
+        font-size: 14px;
+      }
+    }
+  }
+  .social{
+    padding-top: 0;
+    svg{
+      path{
+        fill: #fff !important;
+      }
+    }
+  }
+}
+
+.button{
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 20px;
+  border: 2px solid #000;
+  transition: .3s;
+
+  &:hover{
+    background: #FFF;
+    color: #000;
+    text-decoration: none;
+  }
+}
+
+.white{
+  .button{
+    border: 0;
   }
 }

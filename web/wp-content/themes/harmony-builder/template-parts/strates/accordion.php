@@ -15,8 +15,8 @@ $backgroundCut = get_background_cut($advanced);
             <div class="col-sm-12">
                 <?php if($accordion_items): ?>
                 <div class="accordeon">
-                    <?php $i = 0; foreach ($accordion_items as $accordion_item ): ?>
-                        <div class="accordeon-item <?= ($i == 0) ? 'is-open': ''; ?>">
+                    <?php foreach ($accordion_items as $accordion_item ): ?>
+                        <div class="accordeon-item">
                             <div class="accordeon-item-title">
                                 <h3>
                                     <?= $accordion_item['title_accordeon']; ?>
@@ -27,7 +27,7 @@ $backgroundCut = get_background_cut($advanced);
                             </div>
                         </div>
 
-                    <?php $i++; endforeach; ?>
+                    <?php endforeach; ?>
                 </div>
                 <?php endif; ?>
             </div>

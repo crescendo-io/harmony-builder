@@ -9760,7 +9760,7 @@ header.burger {
     z-index: 10;
     width: 100%;
 }
-header.burger .logo {
+header.burger .logo, header.burger .logo-scroll {
     width: 63px;
     margin-top: 30px;
 }
@@ -9792,18 +9792,19 @@ header.burger .button-menu .text {
     display: inline-block;
     font-size: 18px;
 }
-header.burger .social {
+
+.social {
     padding: 45px 30px;
 }
-header.burger .social li {
+.social li {
     display: inline-block;
     padding-left: 20px;
 }
-header.burger .social li svg {
+.social li svg {
     width: 20px;
     height: 20px;
 }
-header.burger .social li svg path {
+.social li svg path {
     fill: #FFF;
 }
 
@@ -9868,9 +9869,32 @@ header.burger .social li svg path {
     margin: 0;
 }
 
+header .logo-scroll {
+    display: none;
+}
+
+header.burger.is-scrolled {
+    position: fixed;
+    transform: translateY(-100%);
+    transition: 0s;
+    top: 0;
+    opacity: 1;
+}
+header.burger.is-scrolled.is-visible {
+    transform: translateY(0%);
+    transition: 0.6s transform;
+}
+header.burger.is-scrolled .logo {
+    display: none;
+}
+header.burger.is-scrolled .logo-scroll {
+    display: inline-block;
+}
+
 .container-iframe iframe {
     width: 100%;
     height: 80vh;
+    border: 0;
 }
 
 .container-image-full img {
@@ -9906,6 +9930,7 @@ header.burger .social li svg path {
     position: absolute;
     bottom: 2vw;
     left: 50%;
+    transform: translateX(-50%);
 }
 .strate-hero .scroll-bottom img {
     width: 4vw;
@@ -9995,6 +10020,7 @@ header.burger .social li svg path {
     font-size: 4vw;
     padding: 35px 0 30px;
     position: relative;
+    cursor: pointer;
 }
 .accordeon .accordeon-item-title:after {
     content: "";
@@ -10026,8 +10052,8 @@ header.burger .social li svg path {
 .accordeon .accordeon-item:first-child {
     border-top: 1px solid #777;
 }
-.accordeon .accordeon-item.is-open .accordeon-item-text {
-    display: block !important;
+.accordeon .accordeon-item.is-open .accordeon-item-title:after {
+    transform: rotate(180deg) translateY(50%);
 }
 
 .card-pricing {
@@ -10071,6 +10097,42 @@ header.burger .social li svg path {
 .container-image-on-text .containter-text {
     position: relative;
     z-index: 3;
+}
+
+.container-pushs-article {
+    color: inherit;
+    margin-bottom: 30px;
+    display: block;
+}
+.container-pushs-article:hover {
+    color: inherit;
+    text-decoration: none;
+}
+.container-pushs-article .pushs-article-image {
+    width: 100%;
+    transition: 0.4s;
+}
+.container-pushs-article .pushs-article-title {
+    font-size: 30px;
+    margin-bottom: 5px;
+    margin-top: 20px;
+    display: block;
+}
+.container-pushs-article:hover .pushs-article-image {
+    transform: scale(0.95);
+}
+.container-pushs-article .fake-link {
+    font-size: 18px;
+    text-decoration: underline;
+}
+
+.container-two-images img {
+    max-width: 80%;
+    position: relative;
+    margin: 0 auto;
+    display: block;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 p {
@@ -10154,6 +10216,10 @@ h5 {
     font-family: "Bebas Neue", sans-serif;
 }
 
+.fake-link {
+    font-family: "Bebas Neue", sans-serif;
+}
+
 .white .button {
     background: #FFF;
     color: #000;
@@ -10176,6 +10242,87 @@ header.burger .button-menu .barre {
 }
 .menu-navigation ul li ul li a {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+header.burger.is-scrolled {
+    background: #FFF;
+    border-bottom: 2px solid #000;
+}
+header.burger.is-scrolled .barre {
+    background: #000;
+}
+header.burger.is-scrolled .barre:before, header.burger.is-scrolled .barre:after {
+    background: #000;
+}
+header.burger.is-scrolled .button-menu {
+    padding: 15px 30px;
+}
+header.burger.is-scrolled .button-menu .text {
+    color: #000;
+}
+header.burger.is-scrolled .logo-scroll {
+    width: 45px;
+    margin-top: 13px;
+}
+header.burger.is-scrolled .social {
+    padding: 30px 30px 27px;
+    margin-bottom: 0;
+}
+header.burger.is-scrolled .social svg path {
+    fill: #000 !important;
+}
+
+footer {
+    padding: 40px 0;
+    background: #000;
+    margin-top: 40px;
+    border-top: 2px solid #000;
+}
+footer p {
+    font-family: "Bebas Neue", sans-serif;
+    color: #FFF;
+    font-size: 18px;
+}
+footer .copyright {
+    color: #FFF;
+    padding-top: 60px;
+    font-size: 12px;
+}
+footer .copyright a {
+    color: #FFF;
+    text-decoration: underline;
+}
+footer .logo-footer {
+    max-width: 60px;
+}
+footer .menu li {
+    margin-bottom: 5px;
+}
+footer .menu li a {
+    color: #fff;
+    font-size: 14px;
+}
+footer .social {
+    padding-top: 0;
+}
+footer .social svg path {
+    fill: #fff !important;
+}
+
+.button {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 20px;
+    border: 2px solid #000;
+    transition: 0.3s;
+}
+.button:hover {
+    background: #FFF;
+    color: #000;
+    text-decoration: none;
+}
+
+.white .button {
+    border: 0;
 }
 
 /*@import 'components/';*/

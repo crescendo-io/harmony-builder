@@ -3,6 +3,7 @@
     font-size: 4vw;
     padding: 35px 0 30px;
     position: relative;
+    cursor: pointer;
     &:after{
       content: "";
       width: 25px;
@@ -40,8 +41,10 @@
   }
 
   .accordeon-item.is-open{
-    .accordeon-item-text{
-      display: block !important;
+    .accordeon-item-title{
+      &:after{
+        transform: rotate(180deg) translateY(50%);
+      }
     }
   }
 }

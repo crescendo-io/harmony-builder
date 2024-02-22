@@ -1,0 +1,10 @@
+.container-two-images{
+  img{
+    max-width: 80%;
+    position: relative;
+    margin: 0 auto;
+    display: block;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}

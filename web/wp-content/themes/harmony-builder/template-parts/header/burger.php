@@ -1,3 +1,11 @@
+<?php
+    $option_logo_primary = get_field('option_logo_primary', 'option');
+    $option_logo_primary_array = get_custom_thumb($option_logo_primary, 'full');
+
+    $option_logo_scroll = get_field('option_logo_scroll', 'option');
+    $option_logo_scroll_array = get_custom_thumb($option_logo_scroll, 'full');
+?>
+
 <header class="burger">
     <div class="container-fluid">
         <div class="row">
@@ -11,34 +19,16 @@
             </div>
             
             <div class="col-sm-2 mx-auto center">
+                <?php if(isset($option_logo_primary_array['url']) && $option_logo_primary_array['url']): ?>
                 <a href="<?= get_site_url(); ?>">
-                    <img src="<?= get_template_directory_uri(); ?>/assets/img/logo.png" class="logo" alt="">
+                    <img src="<?= $option_logo_primary_array['url']; ?>" class="logo" alt="">
+                    <img src="<?= $option_logo_scroll_array['url']; ?>" class="logo-scroll" alt="">
                 </a>
+                <?php endif; ?>
             </div>
 
             <div class="col-sm-5">
-                <ul class="social text-right">
-                    <li>
-                        <a href="">
-                            <?= get_template_part('template-parts/icons/icon-facebook'); ?>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="">
-                            <?= get_template_part('template-parts/icons/icon-instagram'); ?>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="">
-                            <?= get_template_part('template-parts/icons/icon-linkedin'); ?>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="">
-                            <?= get_template_part('template-parts/icons/icon-pinterest'); ?>
-                        </a>
-                    </li>
-                </ul>
+                <?php get_template_part('template-parts/general/bloc-social');?>
             </div>
         </div>
     </div>
