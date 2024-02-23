@@ -9,7 +9,7 @@
 <header class="burger">
     <div class="container-fluid">
         <div class="row">
-            <div class="col-sm-5">
+            <div class="col-sm-5 col-2">
                 <div class="button-menu">
                     <div class="barre"></div>
                     <div class="text">
@@ -18,7 +18,7 @@
                 </div>
             </div>
             
-            <div class="col-sm-2 mx-auto center">
+            <div class="col-sm-2 col-8  center">
                 <?php if(isset($option_logo_primary_array['url']) && $option_logo_primary_array['url']): ?>
                 <a href="<?= get_site_url(); ?>">
                     <img src="<?= $option_logo_primary_array['url']; ?>" class="logo" alt="">

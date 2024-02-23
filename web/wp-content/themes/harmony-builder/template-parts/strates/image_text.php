@@ -31,6 +31,14 @@
             </div>
             <?php endif; ?>
 
+            <?php if($order == 'right'): ?>
+            <div class="col-sm-6 visible-xs">
+                <?php if($imageArray['url']): ?>
+                    <img src="<?= $imageArray['url']; ?>" class="image-strate" alt="">
+                <?php endif; ?>
+            </div>
+            <?php endif; ?>
+
             <div class="col-sm-6">
                 <div class="text-content">
                     <h2 style="<?=($title_color) ? 'color: '. $title_color : ''; ?>" class="<?= $title_size; ?>"><?= $title; ?></h2>
@@ -42,7 +50,7 @@
             </div>
 
             <?php if($order == 'right'): ?>
-                <div class="col-sm-6">
+                <div class="col-sm-6 hidden-xs">
                     <?php if($imageArray['url']): ?>
                         <img src="<?= $imageArray['url']; ?>" class="image-strate" alt="">
                     <?php endif; ?>

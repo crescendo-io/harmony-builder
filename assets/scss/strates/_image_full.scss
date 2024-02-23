@@ -3,3 +3,13 @@
     width: 100%;
   }
 }
+
+@media (max-width: 768px) {
+  .container-image-full{
+    overflow: hidden;
+    img{
+      width: 150%;
+      translate: translateX(-25%);
+    }
+  }
+}

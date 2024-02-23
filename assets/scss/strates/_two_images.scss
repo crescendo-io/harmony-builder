@@ -8,3 +8,12 @@
     transform: translateY(-50%);
   }
 }
+
+@media (max-width: 768px) {
+  .container-two-images {
+    img {
+      max-width: 100%;
+      margin-bottom: 30px;
+    }
+  }
+}

@@ -4,6 +4,8 @@
     padding: 35px 0 30px;
     position: relative;
     cursor: pointer;
+    padding-right: 45px;
+
     &:after{
       content: "";
       width: 25px;
@@ -45,6 +47,15 @@
       &:after{
         transform: rotate(180deg) translateY(50%);
       }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .accordeon .accordeon-item-title{
+    h3{
+      font-size: 25px;
+      line-height: 25px;
     }
   }
 }

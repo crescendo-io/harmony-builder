@@ -9829,11 +9829,11 @@ header.burger .button-menu .text {
 }
 .menu-navigation ul {
     padding-left: 60px;
-    max-height: calc(100% - 70px);
+    max-height: calc(100% - 90px);
     overflow: auto;
     text-align: left;
     position: relative;
-    top: calc(50% + 70px);
+    top: calc(50% + 45px);
     transform: translateY(-50%);
     width: 100%;
 }
@@ -9901,6 +9901,15 @@ header.burger.is-scrolled .logo-scroll {
     width: 100%;
 }
 
+@media (max-width: 768px) {
+    .container-image-full {
+        overflow: hidden;
+    }
+    .container-image-full img {
+        width: 150%;
+        translate: translateX(-25%);
+    }
+}
 .container-image-text .image-strate {
     width: 70%;
     margin: 0 auto;
@@ -9915,6 +9924,12 @@ header.burger.is-scrolled .logo-scroll {
     max-width: 100%;
 }
 
+@media (max-width: 768px) {
+    .container-image-text .image-strate {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+}
 .strate-hero {
     position: relative;
     height: 100vh;
@@ -9977,6 +9992,12 @@ header.burger.is-scrolled .logo-scroll {
     font-size: 4vw;
 }
 
+@media (max-width: 768px) {
+    .strate-hero .strate-hero_inner h1.medium {
+        font-size: 50px;
+        line-height: 50px;
+    }
+}
 .container-text-only p {
     max-width: 70%;
     display: inline-block;
@@ -10005,6 +10026,11 @@ header.burger.is-scrolled .logo-scroll {
     margin-right: 0;
 }
 
+@media (max-width: 768px) {
+    .container-text-only p {
+        max-width: 100%;
+    }
+}
 .container-picto {
     padding: 15px;
 }
@@ -10016,11 +10042,17 @@ header.burger.is-scrolled .logo-scroll {
     font-size: 25px;
 }
 
+@media (max-width: 768px) {
+    .container-picto {
+        text-align: center;
+    }
+}
 .accordeon .accordeon-item-title {
     font-size: 4vw;
     padding: 35px 0 30px;
     position: relative;
     cursor: pointer;
+    padding-right: 45px;
 }
 .accordeon .accordeon-item-title:after {
     content: "";
@@ -10056,6 +10088,12 @@ header.burger.is-scrolled .logo-scroll {
     transform: rotate(180deg) translateY(50%);
 }
 
+@media (max-width: 768px) {
+    .accordeon .accordeon-item-title h3 {
+        font-size: 25px;
+        line-height: 25px;
+    }
+}
 .card-pricing {
     border: 1px solid #222;
     padding: 30px;
@@ -10073,6 +10111,11 @@ header.burger.is-scrolled .logo-scroll {
     font-size: 25px;
 }
 
+@media (max-width: 768px) {
+    .card-pricing .description-pricing {
+        min-height: 180px;
+    }
+}
 .container-image-on-text {
     position: relative;
     padding: 150px 0;
@@ -10099,6 +10142,11 @@ header.burger.is-scrolled .logo-scroll {
     z-index: 3;
 }
 
+@media (max-width: 768px) {
+    .strate.container-image-on-text {
+        padding: 90px 0;
+    }
+}
 .container-pushs-article {
     color: inherit;
     margin-bottom: 30px;
@@ -10135,6 +10183,61 @@ header.burger.is-scrolled .logo-scroll {
     transform: translateY(-50%);
 }
 
+@media (max-width: 768px) {
+    .container-two-images img {
+        max-width: 100%;
+        margin-bottom: 30px;
+    }
+}
+.visible-xs {
+    display: none;
+}
+
+.hidden-xs {
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .visible-xs {
+        display: block;
+    }
+
+    .hidden-xs {
+        display: none;
+    }
+
+    header.burger.is-scrolled .button-menu {
+        padding: 0;
+    }
+    header.burger .logo {
+        width: 55px;
+        margin-top: 15px;
+    }
+    header.burger .button-menu {
+        padding: 30px 15px;
+    }
+    header.burger .button-menu .text {
+        display: none;
+    }
+    header .social {
+        display: none;
+    }
+
+    .menu-navigation ul {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    .menu-navigation .menu {
+        width: 100%;
+    }
+
+    .strate-hero .scroll-bottom {
+        bottom: 30px;
+    }
+    .strate-hero .scroll-bottom img {
+        width: 60px;
+    }
+}
 h3, h2, h4, h1, h5,
 .card-pricing .title-pricing,
 footer p,
@@ -10298,6 +10401,79 @@ footer .social svg path {
     fill: #fff !important;
 }
 
+@media (max-width: 768px) {
+    .container {
+        width: 100%;
+    }
+
+    .button {
+        padding: 8px 30px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+
+    h3 {
+        font-size: 50px;
+        line-height: 50px;
+    }
+
+    h2 {
+        font-size: 50px;
+    }
+    h2.big {
+        font-size: 70px;
+        line-height: 60px;
+    }
+    h2.normal {
+        font-size: 40px;
+        line-height: 40px;
+    }
+
+    h4 {
+        font-size: 35px;
+        line-height: 35px;
+    }
+
+    header.burger.is-scrolled .button-menu {
+        padding: 0;
+        padding-top: 20px;
+    }
+
+    header.burger.is-scrolled .logo-scroll {
+        margin-top: 0;
+    }
+
+    .strate-hero .strate-hero_inner h1.big {
+        font-size: 100px;
+        line-height: 80px;
+    }
+
+    .strate-hero h4 {
+        font-size: 20px;
+    }
+
+    .strate {
+        padding: 15px 0;
+    }
+
+    footer {
+        text-align: center;
+    }
+    footer .menu {
+        margin-bottom: 30px;
+    }
+    footer .logo-footer {
+        margin-bottom: 30px;
+    }
+    footer .social {
+        margin-top: 30px;
+    }
+    footer .social.text-right {
+        text-align: center !important;
+    }
+}
 /*@import 'components/';*/
 /*@import 'pages/';*/
 

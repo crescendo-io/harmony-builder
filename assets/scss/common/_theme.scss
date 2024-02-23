@@ -196,3 +196,75 @@ footer{
     }
   }
 }
+
+
+@media (max-width: 768px) {
+  .container{
+    width: 100%;
+  }
+
+  .button{
+    padding: 8px 30px;
+  }
+  p{
+    font-size: 16px;
+  }
+  h3{
+    font-size: 50px;
+    line-height: 50px;
+  }
+  h2{
+    font-size: 50px;
+
+    &.big{
+      font-size: 70px;
+      line-height: 60px;
+    }
+    &.normal{
+      font-size: 40px;
+      line-height: 40px;
+    }
+  }
+
+  h4{
+    font-size: 35px;
+    line-height: 35px;
+  }
+
+  header.burger.is-scrolled .button-menu{
+    padding: 0;
+    padding-top: 20px;
+  }
+  header.burger.is-scrolled .logo-scroll{
+    margin-top: 0;
+  }
+
+  .strate-hero .strate-hero_inner h1.big{
+    font-size: 100px;
+    line-height: 80px;
+  }
+  .strate-hero h4{
+    font-size: 20px;
+  }
+
+  .strate{
+    padding: 15px 0;
+  }
+
+  footer{
+    text-align: center;
+
+    .menu{
+      margin-bottom: 30px;
+    }
+    .logo-footer{
+      margin-bottom: 30px;
+    }
+    .social{
+      margin-top: 30px;
+      &.text-right{
+        text-align: center !important;
+      }
+    }
+  }
+}

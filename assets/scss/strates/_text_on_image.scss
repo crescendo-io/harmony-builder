@@ -28,3 +28,9 @@
     z-index: 3;
   }
 }
+
+@media (max-width: 768px) {
+  .strate.container-image-on-text{
+    padding: 90px 0;
+  }
+}
