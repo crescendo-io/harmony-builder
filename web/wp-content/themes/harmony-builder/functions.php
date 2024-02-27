@@ -12,7 +12,7 @@ if (ENV_PROD) {
 }
 
 if(!ENV_LOCAL){
-    require_once (__DIR__ . '/inc/acf.php');
+    define('ACF_LITE' , true);
 }
 
 require_once (__DIR__ . '/inc/datatypes.php');
