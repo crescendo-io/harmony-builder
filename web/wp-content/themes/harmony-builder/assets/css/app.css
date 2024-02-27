@@ -10098,6 +10098,13 @@ header.burger.is-scrolled .logo-scroll {
     border: 1px solid #222;
     padding: 30px;
     margin-bottom: 30px;
+    display: block;
+    color: inherit;
+}
+.card-pricing:hover {
+    background: #F7F7F7;
+    text-decoration: none;
+    color: inherit;
 }
 .card-pricing .title-pricing {
     font-size: 25px;

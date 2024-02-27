@@ -25,10 +25,15 @@ $backgroundCut = get_background_cut($advanced);
                 $bloc_pricing_title = $bloc_pricing_item['bloc_pricing_title'];
                 $bloc_pricing_description = $bloc_pricing_item['bloc_pricing_description'];
                 $bloc_pricing_pricing = $bloc_pricing_item['bloc_pricing_pricing'];
+                $bloc_pricing_link = $bloc_pricing_item['bloc_pricing_link'];
             ?>
 
             <div class="col-sm-<?= $classCol; ?>">
+                <?php if($bloc_pricing_link && $bloc_pricing_link['title'] && $bloc_pricing_link['url']): ?>
+                <a class="card-pricing" href="<?= $bloc_pricing_link['url']; ?>">
+                <?php else: ?>
                 <div class="card-pricing">
+                <?php endif; ?>
                     <div class="title-pricing">
                         <?= $bloc_pricing_title; ?>
                     </div>
@@ -39,7 +44,11 @@ $backgroundCut = get_background_cut($advanced);
                     <div class="price">
                         <?= $bloc_pricing_pricing; ?>
                     </div>
+                <?php if($bloc_pricing_link && $bloc_pricing_link['title'] && $bloc_pricing_link['url']): ?>
+                </a>
+                <?php else: ?>
                 </div>
+                <?php endif; ?>
             </div>
             <?php endforeach; ?>
         </div>
