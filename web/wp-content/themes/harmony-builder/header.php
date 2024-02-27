@@ -14,18 +14,24 @@
     <title><?php echo $pageTitle; ?></title>
     <meta name="description" content="<?php echo $siteDescription; ?>">
 
+    <?php
+        $favicon = get_field('option_logo_favicon', 'option');
+        $faviconArray = get_custom_thumb($favicon, 'full');
+    ?>
     <!-- Copy & Paste Real Favicon Geenerator code : http://realfavicongenerator.net -->
-    <link rel="apple-touch-icon" sizes="180x180" href="<?php echo get_template_directory_uri(); ?>/assets/favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" href="<?php echo get_template_directory_uri(); ?>/assets/favicon/favicon-32x32.png" sizes="32x32">
-    <link rel="icon" type="image/png" href="<?php echo get_template_directory_uri(); ?>/assets/favicon/favicon-16x16.png" sizes="16x16">
+    <?php if($faviconArray && $faviconArray['url']): ?>
+    <link rel="apple-touch-icon" sizes="180x180" href="<?php echo $faviconArray['url']; ?>">
+    <link rel="icon" type="image/png" href="<?php echo $faviconArray['url']; ?>">
+    <link rel="icon" type="image/png" href="<?php echo $faviconArray['url']; ?>">
+        <link rel="apple-touch-startup-image" href="<?php echo $faviconArray['url']; ?>">
+        <link rel="shortcut icon" type="image/x-icon" href="<?php echo $faviconArray['url']; ?>">
+    <?php endif; ?>
     <link rel="manifest" href="<?php echo get_template_directory_uri(); ?>/assets/favicon/site.webmanifest" crossorigin="use-credentials">
-    <link rel="mask-icon" href="<?php echo get_template_directory_uri(); ?>/assets/favicon/safari-pinned-tab.svg" color="#5bbad5">
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
     <!-- Apple Mobile -->
     <link rel="apple-touch-icon-precomposed" href="">
-    <link rel="apple-touch-startup-image" href="<?php echo get_template_directory_uri(); ?>/assets/favicon/startup.png">
-    <link rel="shortcut icon" type="image/x-icon" href="<?php echo get_template_directory_uri(); ?>/assets/favicon/favicon.ico">
+
     <meta name='HandheldFriendly' content='true' />
     <meta name='format-detection' content='telephone=no' />
     <meta name="msapplication-tap-highlight" content="no">
