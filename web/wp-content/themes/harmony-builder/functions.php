@@ -14,9 +14,6 @@ if (ENV_PROD) {
 if(!ENV_LOCAL){
     require_once (__DIR__ . '/inc/acf.php');
 }
-if(!ENV_LOCAL){
-    define('ACF_LITE' , true);
-}
 
 require_once (__DIR__ . '/inc/datatypes.php');
 require_once (__DIR__ . '/inc/configuration.php');
