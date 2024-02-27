@@ -29,7 +29,7 @@ $backgroundCut = get_background_cut($advanced);
             ?>
 
             <div class="col-sm-<?= $classCol; ?>">
-                <?php if($bloc_pricing_link && $bloc_pricing_link['title'] && $bloc_pricing_link['url']): ?>
+                <?php if($bloc_pricing_link && isset($bloc_pricing_link['title']) && isset($bloc_pricing_link['url'])): ?>
                 <a class="card-pricing" href="<?= $bloc_pricing_link['url']; ?>">
                 <?php else: ?>
                 <div class="card-pricing">
