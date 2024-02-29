@@ -6,7 +6,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-sm-3">
-                        <img src="<?= $option_logo_footer_array['url']; ?>" class="logo-footer" alt="">
+                        <img src="<?= $option_logo_footer_array['url']; ?>" class="logo-footer" alt="<?= $option_logo_footer_array['alt']; ?>">
                     </div>
                     <div class="col-sm-3">
                         <p>Accès Rapide</p>

@@ -21,8 +21,8 @@
             <div class="col-sm-2 col-8  center">
                 <?php if(isset($option_logo_primary_array['url']) && $option_logo_primary_array['url']): ?>
                 <a href="<?= get_site_url(); ?>">
-                    <img src="<?= $option_logo_primary_array['url']; ?>" class="logo" alt="">
-                    <img src="<?= $option_logo_scroll_array['url']; ?>" class="logo-scroll" alt="">
+                    <img src="<?= $option_logo_primary_array['url']; ?>" class="logo" alt="<?= $option_logo_primary_array['alt']; ?>">
+                    <img src="<?= $option_logo_scroll_array['url']; ?>" class="logo-scroll" alt="<?= $option_logo_scroll_array['alt']; ?>">
                 </a>
                 <?php endif; ?>
             </div>

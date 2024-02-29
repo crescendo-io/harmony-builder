@@ -34,7 +34,7 @@
 
     <?php if($page_introduction_scroll && $page_introduction_height == "full"): ?>
     <div class="scroll-bottom">
-        <img src="<?= get_template_directory_uri(); ?>/assets/img/scroll.svg" alt="">
+        <img src="<?= get_template_directory_uri(); ?>/assets/img/scroll.svg" alt="Icon montrant une flèche vers le bas">
     </div>
     <?php endif; ?>
 </div>
