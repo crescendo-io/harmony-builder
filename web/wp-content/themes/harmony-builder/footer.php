@@ -38,6 +38,17 @@
             </div>
         </footer>
 
+
+        <?php
+        $cookieConsent = $_COOKIE["cookieyes-consent"];
+
+        $searchConsent = strpos($cookieConsent, 'analytics:yes');
+
+        if($searchConsent && get_field('option_ga_code', 'option')):
+            echo get_field('option_ga_code', 'option');
+        endif;
+        ?>
+
         <?php wp_footer(); ?>
     </body>
 </html>
