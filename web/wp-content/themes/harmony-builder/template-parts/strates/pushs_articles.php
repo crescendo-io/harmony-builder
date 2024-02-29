@@ -35,7 +35,7 @@ $backgroundCut = get_background_cut($advanced);
                     <?php else: ?>
                     <div class="container-pushs-article">
                     <?php endif; ?>
-                        <img src="<?= $imageBlocArray['url']; ?>" class="pushs-article-image" alt="">
+                        <img src="<?= $imageBlocArray['url']; ?>" class="pushs-article-image" alt="<?= $imageBlocArray['alt']; ?>">
                         <h5 class="pushs-article-title">
                             <?= $title; ?>
                         </h5>

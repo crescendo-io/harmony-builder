@@ -15,7 +15,7 @@ $backgroundCut = get_background_cut($advanced);
 <div class="strate container-image-on-text <?= $classNames ?> <?= ($imageDark == 1) ? 'img-dark': ''; ?>" <?= $backgroundColor; ?>>
     <?= $backgroundCut; ?>
 
-    <img src="<?= $imageArray['url']; ?>" alt="">
+    <img src="<?= $imageArray['url']; ?>" alt="<?= $imageArray['alt']; ?>">
 
     <div class="container">
         <div class="row">

@@ -29,7 +29,7 @@ $backgroundCut = get_background_cut($advanced);
             ?>
                 <div class="col-sm-<?= $classCol; ?>">
                     <div class="container-picto">
-                        <img src="<?= $imagePictoArray['url']; ?>" alt="">
+                        <img src="<?= $imagePictoArray['url']; ?>" alt="<?= $imagePictoArray['alt']; ?>">
                         <h5 class="picto-title">
                             <?= $title; ?>
                         </h5>

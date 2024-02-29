@@ -13,7 +13,7 @@
 <?php if($image_format != 'image_full_container'): ?>
 <div class="container-image-full">
     <?php if($imageArray['url']): ?>
-        <img src="<?= $imageArray['url']; ?>" class="image-strate" alt="">
+        <img src="<?= $imageArray['url']; ?>" class="image-strate" alt="<?= $imageArray['alt']; ?>">
     <?php endif; ?>
 </div>
 <?php else: ?>
@@ -24,7 +24,7 @@
         <div class="row">
             <div class="col-sm-12">
                 <?php if($imageArray['url']): ?>
-                    <img src="<?= $imageArray['url']; ?>" class="image-strate" alt="">
+                    <img src="<?= $imageArray['url']; ?>" class="image-strate" alt="<?= $imageArray['alt']; ?>">
                 <?php endif; ?>
             </div>
         </div>

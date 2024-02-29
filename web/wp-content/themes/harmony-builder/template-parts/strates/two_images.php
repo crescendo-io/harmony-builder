@@ -15,10 +15,10 @@ $backgroundCut = get_background_cut($advanced);
     <div class="container">
         <div class="row">
             <div class="col-sm-6">
-                <img src="<?= $image_1_array['url']; ?>" alt="">
+                <img src="<?= $image_1_array['url']; ?>" alt="<?= $image_1_array['alt']; ?>">
             </div>
             <div class="col-sm-6">
-                <img src="<?= $image_2_array['url']; ?>" alt="">
+                <img src="<?= $image_2_array['url']; ?>" alt="<?= $image_2_array['alt']; ?>">
             </div>
         </div>
     </div>

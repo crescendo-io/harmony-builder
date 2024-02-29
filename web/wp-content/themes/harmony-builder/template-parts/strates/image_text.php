@@ -26,7 +26,7 @@
             <?php if($order == 'left'): ?>
             <div class="col-sm-6">
                 <?php if($imageArray['url']): ?>
-                    <img src="<?= $imageArray['url']; ?>" class="image-strate" alt="">
+                    <img src="<?= $imageArray['url']; ?>" class="image-strate" alt="<?= $imageArray['alt']; ?>">
                 <?php endif; ?>
             </div>
             <?php endif; ?>
@@ -34,7 +34,7 @@
             <?php if($order == 'right'): ?>
             <div class="col-sm-6 visible-xs">
                 <?php if($imageArray['url']): ?>
-                    <img src="<?= $imageArray['url']; ?>" class="image-strate" alt="">
+                    <img src="<?= $imageArray['url']; ?>" class="image-strate" alt="<?= $imageArray['alt']; ?>">
                 <?php endif; ?>
             </div>
             <?php endif; ?>
@@ -52,7 +52,7 @@
             <?php if($order == 'right'): ?>
                 <div class="col-sm-6 hidden-xs">
                     <?php if($imageArray['url']): ?>
-                        <img src="<?= $imageArray['url']; ?>" class="image-strate" alt="">
+                        <img src="<?= $imageArray['url']; ?>" class="image-strate" alt="<?= $imageArray['alt']; ?>">
                     <?php endif; ?>
                 </div>
             <?php endif; ?>
