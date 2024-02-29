@@ -31,7 +31,7 @@
                 <div class="row">
                     <div class="col-sm-12 center">
                         <div class="copyright">
-                            Site Web By <a href="https://crescendo-studio.io/" target="_blank">Crescendo</a> ©<?= date("Y"); ?> Tous droits reservés
+                            Site Web By <a href="https://crescendo-studio.io/" rel="noopener" target="_blank">Crescendo</a> ©<?= date("Y"); ?> Tous droits reservés
                         </div>
                     </div>
                 </div>
@@ -48,6 +48,12 @@
             echo get_field('option_ga_code', 'option');
         endif;
         ?>
+
+
+
+        <?php if(get_field('option_structured_datas', 'option')): ?>
+            <?= get_field('option_structured_datas', 'option'); ?>
+        <?php endif; ?>
 
         <?php wp_footer(); ?>
     </body>
