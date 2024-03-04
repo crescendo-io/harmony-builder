@@ -12,6 +12,12 @@
     display: none;
   }
 
+  .container-buttons{
+    .button.secondary{
+      margin-top: 15px;
+    }
+  }
+
   header {
     &.burger{
 
