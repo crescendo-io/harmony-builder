@@ -8,8 +8,8 @@
   .container-image-full{
     overflow: hidden;
     img{
-      width: 150%;
-      translate: translateX(-25%);
+      width: calc(100% + 30px);
+      margin-left: -15px;
     }
   }
 }

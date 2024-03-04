@@ -9906,8 +9906,8 @@ header.burger.is-scrolled .logo-scroll {
         overflow: hidden;
     }
     .container-image-full img {
-        width: 150%;
-        translate: translateX(-25%);
+        width: calc(100% + 30px);
+        margin-left: -15px;
     }
 }
 .container-image-text .image-strate {
