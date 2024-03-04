@@ -9823,7 +9823,7 @@ header.burger .button-menu .text {
     width: 40%;
     height: 100%;
     background: black;
-    z-index: 3;
+    z-index: 5;
     transform: translateX(-100%);
     transition: 0.4s;
 }
@@ -10211,6 +10211,10 @@ header.burger.is-scrolled .logo-scroll {
 
     .hidden-xs {
         display: none;
+    }
+
+    .container-buttons .button.secondary {
+        margin-top: 15px;
     }
 
     header.burger.is-scrolled .button-menu {
