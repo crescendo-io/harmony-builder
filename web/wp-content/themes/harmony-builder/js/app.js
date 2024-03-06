@@ -2,6 +2,19 @@ function scrollToAnimate(scrollTo){
     //$("html, body").stop().animate({scrollTop:scrollTo}, 100, 'swing');
 }
 
+$(document).mouseup(function(e)
+{
+    if($('body').hasClass('nav-is-visible')){
+        var container = $(".menu, .button-menu");
+
+        // if the target of the click isn't the container nor a descendant of the container
+        if (!container.is(e.target) && container.has(e.target).length === 0)
+        {
+            $('body').removeClass('nav-is-visible');
+        }
+    }
+});
+
 $(window).on('load',function(){
     // Ouverture du menu
    $('.button-menu').click(function(){
@@ -34,4 +47,6 @@ $(window).on('load',function(){
         el.parent().find('.accordeon-item-text').slideToggle(100);
     });
 });
+
+
 
