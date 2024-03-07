@@ -60,6 +60,14 @@ function scripts_site(){
     }
 }
 
+function redirect_404_to_home() {
+    if (is_404()) {
+        wp_redirect(home_url());
+        exit;
+    }
+}
+add_action('template_redirect', 'redirect_404_to_home');
+
 function get_custom_thumb($id="", $size=""){
     $datas['url'] = '';
     $datas['alt'] = '';
