@@ -73,5 +73,6 @@ web/wp-config.php
 # Front
 web/wp-content/themes/foxagency
 web/wp-content/themes/egp
+web/wp-content/themes/crescendo
 !web/wp-content/themes/default
 node_modules/*
