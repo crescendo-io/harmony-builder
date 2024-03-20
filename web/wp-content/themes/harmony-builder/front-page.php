@@ -1,10 +1,16 @@
 <?php
 get_header();
 
-if( have_rows('page') ):
+?>
+
+    <!-- Slider main container -->
+
+
+<?php if( have_rows('page') ):
     while ( have_rows('page') ) : the_row();
         get_template_part('template-parts/strates/' . get_row_layout());
     endwhile;
-endif;
+endif; ?>
 
-get_footer();
+
+<?php get_footer();

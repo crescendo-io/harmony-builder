@@ -16,6 +16,7 @@ $(document).mouseup(function(e)
 });
 
 $(window).on('load',function(){
+
     // Ouverture du menu
    $('.button-menu').click(function(){
        scrollToAnimate(0);
@@ -45,6 +46,40 @@ $(window).on('load',function(){
 
         el.parent().toggleClass('is-open');
         el.parent().find('.accordeon-item-text').slideToggle(100);
+    });
+
+    // Slider cards
+
+    const swiper = new Swiper('.swiper', {
+        // Optional parameters
+        direction: 'horizontal',
+        loop: true,
+
+        // If we need pagination
+        pagination: {
+            el: '.swiper-pagination',
+        },
+        breakpoints: {
+            // when window width is >= 320px
+            320: {
+                slidesPerView: 1.3,
+                spaceBetween: 20
+            },
+            // when window width is >= 480px
+            480: {
+                slidesPerView: 3,
+            },
+            // when window width is >= 640px
+            640: {
+                slidesPerView: 3,
+            },
+            1025: {
+                slidesPerView: 4.2,
+            }
+        }
+
+
+        // And if we need scrollbar
     });
 });
 

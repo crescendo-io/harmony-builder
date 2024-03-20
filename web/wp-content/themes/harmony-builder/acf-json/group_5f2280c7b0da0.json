@@ -6,6 +6,7 @@
             "key": "field_5f22834ccd23f",
             "label": "Titre",
             "name": "params-cookies-title",
+            "aria-label": "",
             "type": "text",
             "instructions": "",
             "required": 0,
@@ -25,6 +26,7 @@
             "key": "field_5f22835dcd240",
             "label": "Introduction",
             "name": "params-cookies-intro",
+            "aria-label": "",
             "type": "textarea",
             "instructions": "",
             "required": 0,
@@ -44,6 +46,7 @@
             "key": "field_5f2280f8cd237",
             "label": "Gestionnaire de cookies",
             "name": "params-cookies-groups",
+            "aria-label": "",
             "type": "repeater",
             "instructions": "",
             "required": 0,
@@ -58,11 +61,13 @@
             "max": 0,
             "layout": "block",
             "button_label": "Ajouter un groupe",
+            "rows_per_page": 20,
             "sub_fields": [
                 {
                     "key": "field_5f22813acd238",
                     "label": "Activation",
                     "name": "activation",
+                    "aria-label": "",
                     "type": "true_false",
                     "instructions": "Active ou désactive les boutons \"Accepter\/Refuser\"",
                     "required": 0,
@@ -76,12 +81,14 @@
                     "default_value": 1,
                     "ui": 1,
                     "ui_on_text": "Oui",
-                    "ui_off_text": "Non"
+                    "ui_off_text": "Non",
+                    "parent_repeater": "field_5f2280f8cd237"
                 },
                 {
                     "key": "field_5f228910ffa2f",
                     "label": "ID",
                     "name": "id",
+                    "aria-label": "",
                     "type": "text",
                     "instructions": "",
                     "required": 0,
@@ -103,12 +110,14 @@
                     "placeholder": "",
                     "prepend": "",
                     "append": "",
-                    "maxlength": ""
+                    "maxlength": "",
+                    "parent_repeater": "field_5f2280f8cd237"
                 },
                 {
                     "key": "field_5f228201cd239",
                     "label": "Titre",
                     "name": "title",
+                    "aria-label": "",
                     "type": "text",
                     "instructions": "",
                     "required": 0,
@@ -122,12 +131,14 @@
                     "placeholder": "",
                     "prepend": "",
                     "append": "",
-                    "maxlength": ""
+                    "maxlength": "",
+                    "parent_repeater": "field_5f2280f8cd237"
                 },
                 {
                     "key": "field_5f228212cd23a",
                     "label": "Texte",
                     "name": "text",
+                    "aria-label": "",
                     "type": "textarea",
                     "instructions": "",
                     "required": 0,
@@ -141,12 +152,14 @@
                     "placeholder": "",
                     "maxlength": "",
                     "rows": 4,
-                    "new_lines": "br"
+                    "new_lines": "br",
+                    "parent_repeater": "field_5f2280f8cd237"
                 },
                 {
                     "key": "field_5f228255cd23b",
                     "label": "Cookies",
                     "name": "cookies",
+                    "aria-label": "",
                     "type": "repeater",
                     "instructions": "",
                     "required": 0,
@@ -161,11 +174,13 @@
                     "max": 0,
                     "layout": "row",
                     "button_label": "Ajouter un cookie",
+                    "rows_per_page": 20,
                     "sub_fields": [
                         {
                             "key": "field_5f2282dfcd23c",
                             "label": "Nom",
                             "name": "name",
+                            "aria-label": "",
                             "type": "text",
                             "instructions": "",
                             "required": 0,
@@ -179,12 +194,14 @@
                             "placeholder": "",
                             "prepend": "",
                             "append": "",
-                            "maxlength": ""
+                            "maxlength": "",
+                            "parent_repeater": "field_5f228255cd23b"
                         },
                         {
                             "key": "field_5f2282e9cd23d",
                             "label": "Domaine",
                             "name": "domain",
+                            "aria-label": "",
                             "type": "text",
                             "instructions": "",
                             "required": 0,
@@ -198,12 +215,14 @@
                             "placeholder": "",
                             "prepend": "",
                             "append": "",
-                            "maxlength": ""
+                            "maxlength": "",
+                            "parent_repeater": "field_5f228255cd23b"
                         },
                         {
                             "key": "field_5f2282f6cd23e",
                             "label": "Description",
                             "name": "description",
+                            "aria-label": "",
                             "type": "textarea",
                             "instructions": "",
                             "required": 0,
@@ -217,9 +236,11 @@
                             "placeholder": "",
                             "maxlength": "",
                             "rows": 4,
-                            "new_lines": "br"
+                            "new_lines": "br",
+                            "parent_repeater": "field_5f228255cd23b"
                         }
-                    ]
+                    ],
+                    "parent_repeater": "field_5f2280f8cd237"
                 }
             ]
         }
@@ -241,5 +262,6 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1628610289
+    "show_in_rest": false,
+    "modified": 1710863095
 }

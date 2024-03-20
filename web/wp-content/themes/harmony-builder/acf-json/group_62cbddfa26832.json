@@ -6,6 +6,7 @@
             "key": "field_62cbde195c97c",
             "label": "Marker.io ID",
             "name": "params-bugreport-id",
+            "aria-label": "",
             "type": "text",
             "instructions": "",
             "required": 0,
@@ -37,7 +38,8 @@
     "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": "",
-    "active": 1,
+    "active": true,
     "description": "",
-    "modified": 1657530765
+    "show_in_rest": false,
+    "modified": 1710863098
 }

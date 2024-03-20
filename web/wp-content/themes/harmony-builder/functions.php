@@ -40,6 +40,7 @@ function scripts_site(){
 
         // Script
         wp_enqueue_script('jquery', get_template_directory_uri() . '/js/jquery.js', array(), filemtime(get_template_directory() . '/js/jquery.js'), true);
+        wp_enqueue_script('swiper', get_template_directory_uri() . '/js/swiper.js', array(), filemtime(get_template_directory() . '/js/swiper.js'), true);
         wp_enqueue_script('app', get_template_directory_uri() . '/js/app.js', array(), filemtime(get_template_directory() . '/js/app.js'), true);
 
 
