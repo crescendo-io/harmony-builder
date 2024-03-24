@@ -1,0 +1,69 @@
+.container-slider-quotes{
+  .citation{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 15px;
+
+    .image-author{
+      width: 65px;
+      display: inline-block;
+      height: 65px;
+      overflow: hidden;
+      vertical-align: middle;
+      margin-right: 15px;
+      border-radius: 50%;
+      img{
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+
+    .stars{
+      margin-bottom: 20px;
+      .star{
+        width: 22px;
+        display: inline-block;
+        height: 15px;
+        opacity: .3;
+
+        &.active{
+          opacity: 1;
+        }
+
+        svg{
+          width: 100%;
+        }
+      }
+      path{
+        fill: #000;
+      }
+    }
+
+    .author-infos{
+      display: inline-block;
+      vertical-align: middle;
+
+      .name{
+        font-size: 22px;
+        line-height: 25px;
+        font-weight: 600;
+      }
+      .post{
+        font-size: 16px;
+      }
+    }
+  }
+
+  &.white{
+    .citation{
+      .stars{
+        path{
+          fill: #FFF;
+        }
+        .star{
+          fill: #FFF;
+        }
+      }
+    }
+  }
+}

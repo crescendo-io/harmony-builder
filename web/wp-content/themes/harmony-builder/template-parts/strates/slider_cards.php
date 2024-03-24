@@ -23,7 +23,7 @@
             </div>
         </div>
     </div>
-    <div class="swiper">
+    <div class="swiper" data-itemsdesk="4.2" data-itemstablet="3" data-itemsmobile="1.3">
         <!-- Additional required wrapper -->
         <div class="swiper-wrapper">
 

@@ -10980,6 +10980,61 @@ button.swiper-pagination-bullet {
         padding: 15px;
     }
 }
+.container-slider-quotes .citation {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 15px;
+}
+.container-slider-quotes .citation .image-author {
+    width: 65px;
+    display: inline-block;
+    height: 65px;
+    overflow: hidden;
+    vertical-align: middle;
+    margin-right: 15px;
+    border-radius: 50%;
+}
+.container-slider-quotes .citation .image-author img {
+    width: 100%;
+    object-fit: cover;
+}
+.container-slider-quotes .citation .stars {
+    margin-bottom: 20px;
+}
+.container-slider-quotes .citation .stars .star {
+    width: 22px;
+    display: inline-block;
+    height: 15px;
+    opacity: 0.3;
+}
+.container-slider-quotes .citation .stars .star.active {
+    opacity: 1;
+}
+.container-slider-quotes .citation .stars .star svg {
+    width: 100%;
+}
+.container-slider-quotes .citation .stars path {
+    fill: #000;
+}
+.container-slider-quotes .citation .author-infos {
+    display: inline-block;
+    vertical-align: middle;
+}
+.container-slider-quotes .citation .author-infos .name {
+    font-size: 22px;
+    line-height: 25px;
+    font-weight: 600;
+}
+.container-slider-quotes .citation .author-infos .post {
+    font-size: 16px;
+}
+.container-slider-quotes.white .citation .stars path {
+    fill: #FFF;
+}
+.container-slider-quotes.white .citation .stars .star {
+    fill: #FFF;
+}
+
 .visible-xs {
     display: none;
 }

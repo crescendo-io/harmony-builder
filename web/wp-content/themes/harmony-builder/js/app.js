@@ -50,37 +50,39 @@ $(window).on('load',function(){
 
     // Slider cards
 
-    const swiper = new Swiper('.swiper', {
-        // Optional parameters
-        direction: 'horizontal',
-        loop: true,
+    $('.swiper').each(function(){
+        var el = this;
+        var itemsDesk = el.dataset.itemsdesk;
+        var itemsTablet = el.dataset.itemstablet;
+        var itemsMobile = el.dataset.itemsmobile;
 
-        // If we need pagination
-        pagination: {
-            el: '.swiper-pagination',
-        },
-        breakpoints: {
-            // when window width is >= 320px
-            320: {
-                slidesPerView: 1.3,
-                spaceBetween: 20
+        new Swiper(el, {
+            // Optional parameters
+            direction: 'horizontal',
+            loop: true,
+
+            // If we need pagination
+            pagination: {
+                el: '.swiper-pagination',
             },
-            // when window width is >= 480px
-            480: {
-                slidesPerView: 3,
-            },
-            // when window width is >= 640px
-            640: {
-                slidesPerView: 3,
-            },
-            1025: {
-                slidesPerView: 4.2,
+            breakpoints: {
+                320: {
+                    slidesPerView: itemsMobile,
+                    spaceBetween: 20
+                },
+                640: {
+                    slidesPerView: itemsTablet,
+                },
+                1025: {
+                    slidesPerView: itemsDesk,
+                }
             }
-        }
 
 
-        // And if we need scrollbar
+            // And if we need scrollbar
+        });
     });
+
 });
 
 
