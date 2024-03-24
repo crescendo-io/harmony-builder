@@ -9808,6 +9808,17 @@ header.burger .button-menu .text {
     fill: #FFF;
 }
 
+header.linear {
+    position: absolute;
+}
+header.linear ul li {
+    display: inline-block;
+}
+header.linear ul li a {
+    color: #000;
+    padding: 0.5vw;
+}
+
 .nav-is-visible {
     overflow: hidden;
 }
