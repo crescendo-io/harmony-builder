@@ -22,7 +22,6 @@ $backgroundCut = get_background_cut($advanced);
             }
 
             foreach ($bloc_pricing as $bloc_pricing_item):
-                $bloc_pricing_title = $bloc_pricing_item['bloc_pricing_title'];
                 $bloc_pricing_description = $bloc_pricing_item['bloc_pricing_description'];
                 $bloc_pricing_pricing = $bloc_pricing_item['bloc_pricing_pricing'];
                 $bloc_pricing_link = $bloc_pricing_item['bloc_pricing_link'];
@@ -34,9 +33,6 @@ $backgroundCut = get_background_cut($advanced);
                 <?php else: ?>
                 <div class="card-pricing">
                 <?php endif; ?>
-                    <div class="title-pricing">
-                        <?= $bloc_pricing_title; ?>
-                    </div>
                     <div class="description-pricing">
                         <?= $bloc_pricing_description; ?>
                     </div>

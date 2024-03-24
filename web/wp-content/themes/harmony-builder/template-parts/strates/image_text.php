@@ -41,10 +41,7 @@
 
             <div class="col-sm-6">
                 <div class="text-content">
-                    <h2 style="<?=($title_color) ? 'color: '. $title_color : ''; ?>" class="<?= $title_size; ?>"><?= $title; ?></h2>
-                    <p>
-                        <?= $text; ?>
-                    </p>
+                    <?= $text; ?>
                     <?= get_template_part('template-parts/general/bloc-button'); ?>
                 </div>
             </div>

@@ -18,9 +18,7 @@ $backgroundCut = get_background_cut($advanced);
                     <?php foreach ($accordion_items as $accordion_item ): ?>
                         <div class="accordeon-item">
                             <div class="accordeon-item-title">
-                                <h3>
-                                    <?= $accordion_item['title_accordeon']; ?>
-                                </h3>
+                                <?= $accordion_item['title_accordeon']; ?>
                             </div>
                             <div class="accordeon-item-text">
                                 <?= $accordion_item['text_accordeon']; ?>

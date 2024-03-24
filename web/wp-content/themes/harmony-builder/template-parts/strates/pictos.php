@@ -24,18 +24,15 @@ $backgroundCut = get_background_cut($advanced);
                 foreach ($pictos_items as $pictos_item):
                     $imagePicto = $pictos_item['pictogramme'];
                     $imagePictoArray = get_custom_thumb($imagePicto);
-                    $title = $pictos_item['title'];
                     $description = $pictos_item['description'];
             ?>
                 <div class="col-sm-<?= $classCol; ?>">
                     <div class="container-picto">
                         <img src="<?= $imagePictoArray['url']; ?>" alt="<?= $imagePictoArray['alt']; ?>">
-                        <h5 class="picto-title">
-                            <?= $title; ?>
-                        </h5>
-                        <p class="picto-description">
+
+                        <div class="picto-description">
                             <?= $description; ?>
-                        </p>
+                        </div>
                     </div>
                 </div>
 

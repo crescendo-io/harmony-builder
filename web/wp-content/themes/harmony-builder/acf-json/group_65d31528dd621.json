@@ -799,6 +799,27 @@
                             "rows_per_page": 20,
                             "sub_fields": [
                                 {
+                                    "key": "field_65ffca71f28b5",
+                                    "label": "Titre",
+                                    "name": "title_accordeon",
+                                    "aria-label": "",
+                                    "type": "wysiwyg",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "tabs": "all",
+                                    "toolbar": "full",
+                                    "media_upload": 1,
+                                    "delay": 0,
+                                    "parent_repeater": "field_65d35b358559c"
+                                },
+                                {
                                     "key": "field_65d35b848559e",
                                     "label": "Texte de l'accordéon",
                                     "name": "text_accordeon",
@@ -2535,5 +2556,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1711261741
+    "modified": 1711262357
 }

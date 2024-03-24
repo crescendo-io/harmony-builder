@@ -21,8 +21,7 @@ $backgroundCut = get_background_cut($advanced);
         <div class="row">
             <div class="col-sm-8 mx-auto center">
                 <div class="containter-text">
-                    <h3><?= $title; ?></h3>
-                    <p><?= $text; ?></p>
+                    <?= $text; ?>
                     <?= get_template_part('template-parts/general/bloc-button'); ?>
                 </div>
             </div>

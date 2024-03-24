@@ -25,7 +25,6 @@ $backgroundCut = get_background_cut($advanced);
             foreach ($blocs as $blocs_item):
                 $imageBloc = $blocs_item['bloc_image'];
                 $imageBlocArray = get_custom_thumb($imageBloc);
-                $title = $blocs_item['titre'];
                 $description = $blocs_item['texte'];
                 $link = $blocs_item['link'];
                 ?>
@@ -36,12 +35,9 @@ $backgroundCut = get_background_cut($advanced);
                     <div class="container-pushs-article">
                     <?php endif; ?>
                         <img src="<?= $imageBlocArray['url']; ?>" class="pushs-article-image" alt="<?= $imageBlocArray['alt']; ?>">
-                        <h5 class="pushs-article-title">
-                            <?= $title; ?>
-                        </h5>
-                        <p class="pushs-article-description">
+                        <div class="pushs-article-description">
                             <?= $description; ?>
-                        </p>
+                        </div>
                     <?php if(isset($link['url']) && $link['url']): ?>
                         <?php if(isset($link['title']) && $link['title']): ?>
                         <div class="fake-link">
