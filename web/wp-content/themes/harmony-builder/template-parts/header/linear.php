@@ -18,7 +18,7 @@
                 </div>
             </div>
 
-            <div class="col-sm-4 col-4">
+            <div class="col-sm-4 col-8">
                 <?php if(isset($option_logo_primary_array['url']) && $option_logo_primary_array['url']): ?>
                 <a href="<?= get_site_url(); ?>">
                     <img src="<?= $option_logo_primary_array['url']; ?>" class="logo" alt="<?= $option_logo_primary_array['alt']; ?>">
@@ -27,7 +27,7 @@
                 <?php endif; ?>
             </div>
 
-            <div class="col-sm-8 col-8 text-right hidden-xs">
+            <div class="col-sm-8 col-2 text-right hidden-xs">
                 <?= wp_nav_menu(array(
                     'menu'				=> "menu", // (int|string|WP_Term) Desired menu. Accepts a menu ID, slug, name, or object.
                     'menu_class'		=> "",
