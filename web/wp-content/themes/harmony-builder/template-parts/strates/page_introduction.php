@@ -21,12 +21,7 @@
         <img src="<?= $page_introduction_background_array['url']; ?>" class="strate-hero_image" width="100%" alt="<?= $page_introduction_background_array['alt']; ?>">
     <?php endif; ?>
     <div class="strate-hero_inner">
-        <h1 class="<?= $page_introduction_title_size; ?>">
-            <?= $page_introduction_title; ?>
-        </h1>
-        <h4>
-            <?= $page_introduction_text; ?>
-        </h4>
+        <?= $page_introduction_title; ?>
 
         <?= get_template_part('template-parts/general/bloc-button'); ?>
 

@@ -61,26 +61,6 @@
                             "delay": 0
                         },
                         {
-                            "key": "field_65d3163fafa93",
-                            "label": "Description",
-                            "name": "page_introduction_text",
-                            "aria-label": "",
-                            "type": "textarea",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "default_value": "",
-                            "maxlength": "",
-                            "rows": "",
-                            "placeholder": "",
-                            "new_lines": ""
-                        },
-                        {
                             "key": "field_65d4872546365",
                             "label": "Boutons",
                             "name": "",
@@ -2603,5 +2583,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1712409116
+    "modified": 1712410460
 }
