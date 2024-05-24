@@ -11,7 +11,8 @@
 ?>
 
 <?php if($image_format != 'image_full_container'): ?>
-<div class="container-image-full">
+<div class="container-image-full <?= $classNames ?>" <?= $backgroundColor; ?>>
+    <?= $backgroundCut; ?>
     <?php if($imageArray['url']): ?>
         <img src="<?= $imageArray['url']; ?>" class="image-strate" alt="<?= $imageArray['alt']; ?>">
     <?php endif; ?>
