@@ -2,6 +2,7 @@
     $cards_items = get_sub_field('cards');
     $cards_title = get_sub_field('title');
 
+    $buttons = get_sub_field('buttons_enable');
     $advanced = get_advanced_fields();
 
     $classNames = get_class_strate($advanced);
@@ -15,12 +16,16 @@
 
     <div class="container">
         <div class="row">
-            <div class="col-sm-8">
+            <div class="col-sm-<?= ($buttons) ? '8' : '12'; ?>">
                 <?= $cards_title; ?>
             </div>
+
+            <?php if($buttons): ?>
             <div class="col-sm-4 text-right">
                 <?= get_template_part('template-parts/general/bloc-button'); ?>
             </div>
+            <?php endif; ?>
+
         </div>
     </div>
     <div class="swiper" data-itemsdesk="4.2" data-itemstablet="3" data-itemsmobile="1.3">

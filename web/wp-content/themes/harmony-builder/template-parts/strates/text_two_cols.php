@@ -8,7 +8,7 @@ $backgroundColor = get_background_strate($advanced);
 $backgroundCut = get_background_cut($advanced);
 ?>
 
-<div class="strate container-text-only <?= $classNames ?>" <?= $backgroundColor; ?>>
+<div class="strate container-text-only two-cols <?= $classNames ?>" <?= $backgroundColor; ?>>
     <?= $backgroundCut; ?>
     <div class="container">
         <div class="row">
