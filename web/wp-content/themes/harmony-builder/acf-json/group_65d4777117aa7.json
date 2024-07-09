@@ -47,6 +47,26 @@
             "return_format": "array"
         },
         {
+            "key": "field_668a7dc10b409",
+            "label": "Class personnalisé",
+            "name": "buttons_1_class",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
             "key": "field_65d477985388c",
             "label": "Bouton secondaire",
             "name": "buttons_2",
@@ -69,6 +89,26 @@
                 "id": ""
             },
             "return_format": "array"
+        },
+        {
+            "key": "field_668a7de50b40a",
+            "label": "Class personnalisé",
+            "name": "buttons_2_class",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
         }
     ],
     "location": [
@@ -89,5 +129,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1710863131
+    "modified": 1720352250
 }

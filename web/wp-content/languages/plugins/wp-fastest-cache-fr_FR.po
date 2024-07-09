@@ -2,12 +2,12 @@
 # This file is distributed under the same license as the Plugins - WP Fastest Cache - Stable (latest release) package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2024-02-29 13:24:37+0000\n"
+"PO-Revision-Date: 2024-06-29 15:52:23+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: GlotPress/4.0.0-beta.3\n"
+"X-Generator: GlotPress/4.0.1\n"
 "Language: fr\n"
 "Project-Id-Version: Plugins - WP Fastest Cache - Stable (latest release)\n"
 
@@ -66,15 +66,16 @@ msgstr "Temporisation JS"
 msgid "WP Fastest Cache Options"
 msgstr "Options de WP Fastest Cache"
 
-#: inc/admin.php:1939 templates/exclude.php:114
+#: inc/admin.php:1941 templates/exclude.php:114
 msgid "has Yandex Click ID Parameters"
 msgstr "possède des paramètres Yandex Click ID"
 
 #. Author URI of the plugin
+#: wpFastestCache.php
 msgid "https://www.wpfastestcache.com/"
 msgstr "https://www.wpfastestcache.com/"
 
-#: inc/admin.php:1734
+#: inc/admin.php:1736
 msgid "Clearing Specific Pages"
 msgstr "Vider le cache de certaines pages"
 
@@ -106,68 +107,68 @@ msgstr "Vider le cache"
 msgid "Eliminate render-blocking JavaScript resources"
 msgstr "Élimine les ressources JavaScript bloquant le rendu (Premium)"
 
-#: inc/admin.php:2177
+#: inc/admin.php:2179
 msgid "Database Cleanup"
 msgstr "Nettoyage de la base de données"
 
-#: inc/admin.php:2068
+#: inc/admin.php:2070
 msgid "CDN Settings"
 msgstr "Réglages CDN"
 
-#: inc/admin.php:2031
+#: inc/admin.php:2033
 msgid "Exclude JS"
 msgstr "Exclure les JS"
 
-#: inc/admin.php:2011
+#: inc/admin.php:2013
 msgid "Exclude CSS"
 msgstr "Exclure les CSS"
 
-#: inc/admin.php:1993
+#: inc/admin.php:1995
 msgid "Exclude Cookies"
 msgstr "Exclure les cookies"
 
-#: inc/admin.php:1974
+#: inc/admin.php:1976
 msgid "Exclude User-Agents"
 msgstr "Exclure les agents utilisateurs"
 
-#: inc/admin.php:1957
+#: inc/admin.php:1959
 msgid "Exclude Pages"
 msgstr "Exclure les pages"
 
-#: inc/admin.php:1791
+#: inc/admin.php:1793
 msgid "Optimize Image Tool"
 msgstr "Outil optimisation d’image"
 
-#: inc/admin.php:1666 inc/admin.php:1738 inc/admin.php:1961 inc/admin.php:1978
-#: inc/admin.php:1997 inc/admin.php:2015 inc/admin.php:2035
+#: inc/admin.php:1668 inc/admin.php:1740 inc/admin.php:1963 inc/admin.php:1980
+#: inc/admin.php:1999 inc/admin.php:2017 inc/admin.php:2037
 msgid "Add New Rule"
 msgstr "Ajouter une nouvelle règle"
 
-#: inc/admin.php:1621
+#: inc/admin.php:1623
 msgid "Timeout Rules"
 msgstr "Règles de délai d’expiration"
 
-#: inc/admin.php:1605
+#: inc/admin.php:1607
 msgid "All cache files will be removed as well"
 msgstr "Tous les fichiers de cache seront également supprimés"
 
-#: inc/admin.php:1604
+#: inc/admin.php:1606
 msgid "If you modify any css file, you have to delete minified css files"
 msgstr "Si vous modifiez un fichier CSS, vous devez supprimer les fichiers CSS minifiés"
 
-#: inc/admin.php:1592 inc/admin.php:1606 inc/admin.php:1607
+#: inc/admin.php:1594 inc/admin.php:1608 inc/admin.php:1609
 msgid "Target folder"
 msgstr "Dossier cible"
 
-#: inc/admin.php:1591
+#: inc/admin.php:1593
 msgid "You can delete all cache files"
 msgstr "Vide tous les fichiers cache"
 
-#: inc/admin.php:1539
+#: inc/admin.php:1541
 msgid "Cache Statistics"
 msgstr "Statistiques de cache"
 
-#: inc/admin.php:1532 inc/admin.php:2204 inc/admin.php:2404
+#: inc/admin.php:1534 inc/admin.php:2206 inc/admin.php:2406
 msgid "Only available in Premium version"
 msgstr "Disponible uniquement avec la version Premium"
 
@@ -339,11 +340,11 @@ msgstr "Réglages"
 msgid "Options have been saved"
 msgstr "Les options ont été enregistrées"
 
-#: inc/admin-toolbar.php:98 inc/admin.php:1600
+#: inc/admin-toolbar.php:98 inc/admin.php:1602
 msgid "Delete Cache and Minified CSS/JS"
 msgstr "Vider le cache et les CSS/JS minifiés"
 
-#: inc/admin-toolbar.php:86 inc/admin.php:1070 inc/admin.php:1579
+#: inc/admin-toolbar.php:86 inc/admin.php:1070 inc/admin.php:1581
 msgid "Delete Cache"
 msgstr "Vider le cache"
 
@@ -399,7 +400,7 @@ msgstr "Choisissez-en un"
 msgid "Then"
 msgstr "Alors"
 
-#: inc/admin.php:1628 templates/timeout.php:95
+#: inc/admin.php:1630 templates/timeout.php:95
 msgid "All"
 msgstr "Tous"
 
@@ -407,54 +408,54 @@ msgstr "Tous"
 msgid "Cache Timeout Wizard"
 msgstr "Assistant d’expiration du cache"
 
-#: inc/admin.php:1940 templates/exclude.php:115
+#: inc/admin.php:1942 templates/exclude.php:115
 msgid "has Woocommerce Items in Cart"
 msgstr "a des articles WooCommerce dans le panier"
 
-#: inc/admin.php:1938 templates/exclude.php:113
+#: inc/admin.php:1940 templates/exclude.php:113
 msgid "has Google Analytics Parameters"
 msgstr "a des paramètres Google Analytics"
 
-#: inc/admin.php:1632 inc/admin.php:1934 templates/exclude.php:107
+#: inc/admin.php:1634 inc/admin.php:1936 templates/exclude.php:107
 #: templates/timeout.php:98
 msgid "Is Equal To"
 msgstr "Est égal à"
 
-#: inc/admin.php:1631 inc/admin.php:1933 templates/exclude.php:106
+#: inc/admin.php:1633 inc/admin.php:1935 templates/exclude.php:106
 #: templates/timeout.php:99
 msgid "Contains"
 msgstr "Contient"
 
-#: inc/admin.php:1630 inc/admin.php:1932 templates/exclude.php:105
+#: inc/admin.php:1632 inc/admin.php:1934 templates/exclude.php:105
 #: templates/timeout.php:97
 msgid "Starts With"
 msgstr "Commence par"
 
-#: inc/admin.php:1931 templates/exclude.php:101 templates/preload.php:122
+#: inc/admin.php:1933 templates/exclude.php:101 templates/preload.php:122
 msgid "Attachments"
 msgstr "fichiers joints"
 
-#: inc/admin.php:1928 templates/exclude.php:100
+#: inc/admin.php:1930 templates/exclude.php:100
 msgid "Archives"
 msgstr "Archives"
 
-#: inc/admin.php:1930 templates/exclude.php:99 templates/preload.php:114
+#: inc/admin.php:1932 templates/exclude.php:99 templates/preload.php:114
 msgid "Pages"
 msgstr "Pages"
 
-#: inc/admin.php:1929 templates/exclude.php:98 templates/preload.php:106
+#: inc/admin.php:1931 templates/exclude.php:98 templates/preload.php:106
 msgid "Posts"
 msgstr "Publications"
 
-#: inc/admin.php:1927 templates/exclude.php:97 templates/preload.php:118
+#: inc/admin.php:1929 templates/exclude.php:97 templates/preload.php:118
 msgid "Tags"
 msgstr "Étiquettes"
 
-#: inc/admin.php:1926 templates/exclude.php:96 templates/preload.php:110
+#: inc/admin.php:1928 templates/exclude.php:96 templates/preload.php:110
 msgid "Categories"
 msgstr "Catégories"
 
-#: inc/admin.php:1629 inc/admin.php:1925 templates/exclude.php:95
+#: inc/admin.php:1631 inc/admin.php:1927 templates/exclude.php:95
 #: templates/timeout.php:96
 msgid "Home Page"
 msgstr "Page d’accueil"
@@ -496,10 +497,10 @@ msgid "Clear Cache of Post Categories"
 msgstr "Vider le cache des catégories de publication"
 
 #: templates/newpost.php:55 templates/updatepost.php:56
-msgid "Clear Cache of Homepage"
+msgid "Clear Cache of Home page"
 msgstr "Vider le cache de la page d’accueil"
 
-#: inc/admin-toolbar.php:91 inc/admin.php:1587 templates/newpost.php:51
+#: inc/admin-toolbar.php:91 inc/admin.php:1589 templates/newpost.php:51
 #: templates/updatepost.php:49
 msgid "Clear All Cache"
 msgstr "Nettoyer tout le cache"
@@ -520,102 +521,106 @@ msgstr "Veuillez mettre à jour"
 msgid "Lazy Load Settings"
 msgstr "Réglages pour le chargement différé"
 
-#: wpFastestCache.php:2244
+#: wpFastestCache.php:2263
 msgid "Once Every 15 Days"
 msgstr "Tous les 15 jours"
 
-#: wpFastestCache.php:2232
+#: wpFastestCache.php:2251
 msgid "Once Every 7 Days"
 msgstr "Tous les 7 jours"
 
-#: wpFastestCache.php:2226
+#: wpFastestCache.php:2245
 msgid "Once Every 3 Days"
 msgstr "Tous les 3 jours"
 
 #. Author of the plugin
+#: wpFastestCache.php
 msgid "Emre Vona"
 msgstr "Emre Vona"
 
 #. Description of the plugin
+#: wpFastestCache.php
 msgid "The simplest and fastest WP Cache system"
 msgstr "Le plus simple et le plus rapide des systèmes de cache pour WordPress"
 
 #. Plugin URI of the plugin
+#: wpFastestCache.php
 msgid "http://wordpress.org/plugins/wp-fastest-cache/"
 msgstr "http://wordpress.org/plugins/wp-fastest-cache/"
 
 #. Plugin Name of the plugin
+#: wpFastestCache.php
 msgid "WP Fastest Cache"
 msgstr "WP Fastest Cache"
 
-#: wpFastestCache.php:2256
+#: wpFastestCache.php:2275
 msgid "Once a Year"
 msgstr "Une fois par an"
 
-#: wpFastestCache.php:2250
+#: wpFastestCache.php:2269
 msgid "Once a Month"
 msgstr "Une fois par mois"
 
-#: wpFastestCache.php:2238
+#: wpFastestCache.php:2257
 msgid "Once Every 10 Days"
 msgstr "Tous les 10 jours"
 
-#: wpFastestCache.php:2220
+#: wpFastestCache.php:2239
 msgid "Once a Day"
 msgstr "Une fois par jour"
 
-#: wpFastestCache.php:2214
+#: wpFastestCache.php:2233
 msgid "Once Every 10 Hours"
 msgstr "Toutes les 10 heures"
 
-#: wpFastestCache.php:2208
+#: wpFastestCache.php:2227
 msgid "Once Every 9 Hours"
 msgstr "Toutes les 9 heures"
 
-#: wpFastestCache.php:2202
+#: wpFastestCache.php:2221
 msgid "Once Every 8 Hours"
 msgstr "Toutes les 8 heures"
 
-#: wpFastestCache.php:2196
+#: wpFastestCache.php:2215
 msgid "Once Every 7 Hours"
 msgstr "Toutes les 7 heures"
 
-#: wpFastestCache.php:2190
+#: wpFastestCache.php:2209
 msgid "Once Every 6 Hours"
 msgstr "Toutes les 6 heures"
 
-#: wpFastestCache.php:2184
+#: wpFastestCache.php:2203
 msgid "Once Every 5 Hours"
 msgstr "Toutes les 5 heures"
 
-#: wpFastestCache.php:2178
+#: wpFastestCache.php:2197
 msgid "Once Every 4 Hours"
 msgstr "Toutes les 4 heures"
 
-#: wpFastestCache.php:2172
+#: wpFastestCache.php:2191
 msgid "Once Every 3 Hours"
 msgstr "Toutes les 3 heures"
 
-#: wpFastestCache.php:2166
+#: wpFastestCache.php:2185
 msgid "Once Every 2 Hours"
 msgstr "Toutes les 2 heures"
 
-#: wpFastestCache.php:2160
+#: wpFastestCache.php:2179
 msgid "Once an Hour"
 msgstr "Toutes les heures"
 
-#: wpFastestCache.php:2154
+#: wpFastestCache.php:2173
 msgid "Twice an Hour"
 msgstr "Deux fois par heure"
 
-#: wpFastestCache.php:2148
+#: wpFastestCache.php:2167
 msgid "Once Every 15 Minutes"
 msgstr "Toutes les 15 minutes"
 
-#: wpFastestCache.php:2142
+#: wpFastestCache.php:2161
 msgid "Once Every 5 Minutes"
 msgstr "Toutes les 5 minutes"
 
-#: wpFastestCache.php:2136
+#: wpFastestCache.php:2155
 msgid "Once Every 1 Minute"
 msgstr "Toutes les minutes"
