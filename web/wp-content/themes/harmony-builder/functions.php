@@ -98,6 +98,7 @@ function get_advanced_fields(){
     $datas['composant_background_cut_purcent']      = get_sub_field('composant_background_cut_purcent');
     $datas['composant_marge']                       = get_sub_field('composant_marge');
     $datas['composant_white_mode']                  = get_sub_field('composant_white_mode');
+    $datas['composant_class']                       = get_sub_field('composant_class');
 
     return $datas;
 }

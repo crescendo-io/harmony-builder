@@ -19,10 +19,14 @@ function dateMonthInFr($date) {
 
 function get_class_strate($advanced) {
     $class = '';
+
+
     if($advanced['composant_white_mode']){
         $class .= "white";
     }if($advanced['composant_marge'] == "small"){
         $class .= " marge-small";
+    }if($advanced['composant_class']){
+        $class .= " " . $advanced['composant_class'];
     }
     return $class;
 }
