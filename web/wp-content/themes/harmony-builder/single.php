@@ -1,20 +1,10 @@
 <?php
-/**
- * The template for displaying all single posts
- *
- * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#single-post
- *
- */
 get_header();
-get_header('nav');
-?>
-    <main id="main" class="main">
-        <?php
-        while (have_posts()):
-            the_post();
-            get_template_part('template-parts/content', get_post_type());
-        endwhile;
-        ?>
-    </main>
-<?php
+
+if( have_rows('page') ):
+    while ( have_rows('page') ) : the_row();
+        get_template_part('template-parts/strates/' . get_row_layout());
+    endwhile;
+endif;
+
 get_footer();
