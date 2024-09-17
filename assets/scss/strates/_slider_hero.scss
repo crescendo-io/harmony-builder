@@ -1,0 +1,22 @@
+.container-hero-slider{
+  .swiper .card-slide{
+    padding: 0;
+    height: 100vh;
+  }
+
+
+  .content{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    padding: 4vw;
+    width: 100%;
+  }
+
+  img{
+    max-width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
