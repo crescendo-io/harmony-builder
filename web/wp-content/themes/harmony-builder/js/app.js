@@ -65,6 +65,10 @@ $(window).on('load',function(){
             pagination: {
                 el: '.swiper-pagination',
             },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
             breakpoints: {
                 320: {
                     slidesPerView: itemsMobile,

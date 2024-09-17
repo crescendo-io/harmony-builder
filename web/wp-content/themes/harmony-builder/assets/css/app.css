@@ -11075,6 +11075,24 @@ button.swiper-pagination-bullet {
     width: 66.6%;
 }
 
+.container-hero-slider .swiper .card-slide {
+    padding: 0;
+    height: 100vh;
+}
+.container-hero-slider .content {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    padding: 4vw;
+    width: 100%;
+}
+.container-hero-slider img {
+    max-width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
 .visible-xs {
     display: none;
 }
