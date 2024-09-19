@@ -30,7 +30,7 @@ $backgroundCut = get_background_cut($advanced);
 
                         <li>
                             <div class="container-image">
-                                <img src="<?= $imageArray['url']; ?>" alt="">
+                                <img src="<?= $imageArray['url']; ?>" alt="<?= $imageArray['alt']; ?>" width="<?= $imageArray['width']; ?>" height="<?= $imageArray['height']; ?>">
                             </div>
                         </li>
                     <?php endif; ?>

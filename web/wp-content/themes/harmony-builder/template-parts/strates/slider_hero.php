@@ -13,6 +13,7 @@ $logo_items = get_sub_field('slider_hero_slides');
             <?php
             foreach ($logo_items as $logo_item ):
                 $image = $logo_item['slider_hero_slides_image'];
+
                 $imageArray = get_custom_thumb($image, 'large');
                 $background = $logo_item['slider_hero_slides_background'];
                 $content = $logo_item['slider_hero_slides_content'];
@@ -22,7 +23,7 @@ $logo_items = get_sub_field('slider_hero_slides');
 
                 <div class="swiper-slide">
                     <div class="card-slide" style="background-color: <?= $background; ?>">
-                        <img src="<?= $imageArray['url']; ?>" alt="">
+                        <img src="<?= $imageArray['url']; ?>" width="<?= $imageArray['width']; ?>" height="<?= $imageArray['height']; ?>" alt="<?= $imageArray['alt']; ?>">
 
                         <div class="content">
                             <?= $content; ?>

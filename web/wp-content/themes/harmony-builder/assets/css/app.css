@@ -11146,6 +11146,10 @@ button.swiper-pagination-bullet {
         width: 60px;
     }
 }
+body img {
+    height: auto;
+}
+
 /*@import 'components/';*/
 /*@import 'pages/';*/
 

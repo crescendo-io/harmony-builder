@@ -24,7 +24,7 @@ $backgroundCut = get_background_cut($advanced);
 
                 <div class="swiper-slide">
                     <div class="card-slide">
-                        <img src="<?= $imageArray['url']; ?>" alt="">
+                        <img src="<?= $imageArray['url']; ?>" width="<?= $imageArray['width']; ?>" height="<?= $imageArray['height']; ?>" alt="<?= $imageArray['alt']; ?>">
                     </div>
                 </div>
             <?php endforeach; ?>

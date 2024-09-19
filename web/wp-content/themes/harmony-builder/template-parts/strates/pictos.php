@@ -28,7 +28,7 @@ $backgroundCut = get_background_cut($advanced);
             ?>
                 <div class="col-sm-<?= $classCol; ?>">
                     <div class="container-picto">
-                        <img src="<?= $imagePictoArray['url']; ?>" alt="<?= $imagePictoArray['alt']; ?>">
+                        <img src="<?= $imagePictoArray['url']; ?>" alt="<?= $imagePictoArray['alt']; ?>" width="<?= $imagePictoArray['width']; ?>" height="<?= $imagePictoArray['height']; ?>">
 
                         <div class="picto-description">
                             <?= $description; ?>

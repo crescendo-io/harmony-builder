@@ -79,6 +79,8 @@ function get_custom_thumb($id="", $size=""){
 
         if($imageURL){
             $datas['url'] = reset($imageURL);
+            $datas['width'] = $imageURL[1];
+            $datas['height'] = $imageURL[2];
         }
         if($attachement){
             $datas['alt'] = $attachement;

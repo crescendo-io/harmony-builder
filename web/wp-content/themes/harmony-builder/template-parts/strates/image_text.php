@@ -26,7 +26,7 @@
             <?php if($order == 'left'): ?>
             <div class="col-sm-6">
                 <?php if($imageArray['url']): ?>
-                    <img src="<?= $imageArray['url']; ?>" class="image-strate" alt="<?= $imageArray['alt']; ?>">
+                    <img src="<?= $imageArray['url']; ?>" class="image-strate" alt="<?= $imageArray['alt']; ?>" width="<?= $imageArray['width']; ?>" height="<?= $imageArray['height']; ?>">
                 <?php endif; ?>
             </div>
             <?php endif; ?>
