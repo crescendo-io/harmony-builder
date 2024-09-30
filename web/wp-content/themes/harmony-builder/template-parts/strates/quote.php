@@ -52,7 +52,7 @@ $backgroundCut = get_background_cut($advanced);
 
                         <?php if(isset($imageArray) && $imageArray): ?>
                         <div class="image-author">
-                            <img src="<?= $imageArray['url']; ?>" alt="<?= $imageArray['alt']; ?>">
+                            <img src="<?= $imageArray['url']; ?>" alt="<?= $imageArray['alt']; ?>" loading="lazy">
                         </div>
                         <?php endif; ?>
                         <div class="author-infos">

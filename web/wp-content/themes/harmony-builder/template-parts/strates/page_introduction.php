@@ -18,7 +18,7 @@
 
 <div class="strate-hero <?= $page_introduction_height; ?> <?= ($page_introduction_background_dark == 1 && $page_introduction_option == "image") ? 'dark' : ''; ?>" style="color: <?= $page_introduction_text_color; ?>; background: <?= $page_introduction_background_color; ?>">
     <?php if($page_introduction_option == "image"): ?>
-        <img src="<?= $page_introduction_background_array['url']; ?>" class="strate-hero_image" alt="<?= $page_introduction_background_array['alt']; ?>" width="<?= $page_introduction_background_array['width']; ?>" height="<?= $page_introduction_background_array['height']; ?>">
+        <img src="<?= $page_introduction_background_array['url']; ?>" class="strate-hero_image" alt="<?= $page_introduction_background_array['alt']; ?>" width="<?= $page_introduction_background_array['width']; ?>" height="<?= $page_introduction_background_array['height']; ?>" loading="lazy">
     <?php endif; ?>
     <div class="strate-hero_inner">
         <?= $page_introduction_title; ?>

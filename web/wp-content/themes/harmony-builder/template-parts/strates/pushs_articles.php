@@ -34,7 +34,7 @@ $backgroundCut = get_background_cut($advanced);
                     <?php else: ?>
                     <div class="container-pushs-article">
                     <?php endif; ?>
-                        <img src="<?= $imageBlocArray['url']; ?>" class="pushs-article-image" alt="<?= $imageBlocArray['alt']; ?>" width="<?= $imageBlocArray['width']; ?>" height="<?= $imageBlocArray['height']; ?>">
+                        <img src="<?= $imageBlocArray['url']; ?>" class="pushs-article-image" alt="<?= $imageBlocArray['alt']; ?>" width="<?= $imageBlocArray['width']; ?>" height="<?= $imageBlocArray['height']; ?>" loading="lazy">
                         <div class="pushs-article-description">
                             <?= $description; ?>
                         </div>

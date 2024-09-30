@@ -45,7 +45,7 @@
                     <?php if($link): ?>
                     <a href="<?= $link['url']; ?>" target="<?= $link['target']; ?>">
                     <?php endif; ?>
-                        <img src="<?= $imageArray['url']; ?>" alt="<?= $imageArray['alt']; ?>" width="<?= $imageArray['width']; ?>" height="<?= $imageArray['height']; ?>">
+                        <img src="<?= $imageArray['url']; ?>" alt="<?= $imageArray['alt']; ?>" width="<?= $imageArray['width']; ?>" height="<?= $imageArray['height']; ?>" loading="lazy">
                         <div class="text">
                             <?= $text; ?>
                         </div>
