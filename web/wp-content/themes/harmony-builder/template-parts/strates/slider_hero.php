@@ -23,7 +23,7 @@ $logo_items = get_sub_field('slider_hero_slides');
 
                 <div class="swiper-slide">
                     <div class="card-slide" style="background-color: <?= $background; ?>">
-                        <img src="<?= $imageArray['url']; ?>" width="<?= $imageArray['width']; ?>" height="<?= $imageArray['height']; ?>" alt="<?= $imageArray['alt']; ?>" loading="lazy">
+                        <img src="<?= $imageArray['url']; ?>" width="<?= $imageArray['width']; ?>" height="<?= $imageArray['height']; ?>" alt="<?= $imageArray['alt']; ?>">
 
                         <div class="content">
                             <?= $content; ?>
