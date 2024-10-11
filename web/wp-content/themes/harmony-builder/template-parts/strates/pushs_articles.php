@@ -27,12 +27,13 @@ $backgroundCut = get_background_cut($advanced);
                 $imageBlocArray = get_custom_thumb($imageBloc);
                 $description = $blocs_item['texte'];
                 $link = $blocs_item['link'];
+
                 ?>
                 <div class="col-sm-<?= $classCol; ?>">
                     <?php if(isset($link['url']) && $link['url']): ?>
-                    <a href="<?= $link['url']; ?>" target="<?= $link['target']; ?>" class="container-pushs-article">
+                    <a href="<?= $link['url']; ?>" target="<?= $link['target']; ?>" class="container-pushs-article <?= ($description == '')? 'no-bg' : ''; ?>">
                     <?php else: ?>
-                    <div class="container-pushs-article">
+                    <div class="container-pushs-article <?= ($description == '')? 'no-bg' : ''; ?>">
                     <?php endif; ?>
                         <img src="<?= $imageBlocArray['url']; ?>" class="pushs-article-image" alt="<?= $imageBlocArray['alt']; ?>" width="<?= $imageBlocArray['width']; ?>" height="<?= $imageBlocArray['height']; ?>" loading="lazy">
                         <div class="pushs-article-description">
