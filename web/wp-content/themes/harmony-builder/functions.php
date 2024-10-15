@@ -5,15 +5,6 @@ define('HOME_URL', get_home_url());
 
 define('AJAX_URL', admin_url('admin-ajax.php'));
 
-if (ENV_PROD) {
-    define('GTAG_KEY', '');
-} else {
-    define('GTAG_KEY', '');
-}
-
-if(!ENV_LOCAL){
-    define('ACF_LITE' , true);
-}
 
 require_once (__DIR__ . '/inc/datatypes.php');
 require_once (__DIR__ . '/inc/configuration.php');
