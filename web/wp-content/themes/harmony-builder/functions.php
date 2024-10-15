@@ -45,7 +45,6 @@ function scripts_site(){
             'wp_theme_url' => THEME_URL,
             'wp_home_url' => HOME_URL,
             'exampleNonce' => wp_create_nonce('exampleNonce'),
-            'gtag_key' =>  GTAG_KEY,
             // 'bug_report_id' =>  get_field('params-bugreport-id', 'options')
         );
         wp_localize_script('script-js', 'ParamsData', $dataToBePassed);
