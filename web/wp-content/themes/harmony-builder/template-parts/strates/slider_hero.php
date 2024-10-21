@@ -6,7 +6,7 @@ $logo_items = get_sub_field('slider_hero_slides');
 
 <div class="strate container-hero-slider">
 
-    <div class="swiper" data-itemsdesk="1" data-itemstablet="1" data-itemsmobile="1">
+    <div class="swiper" data-itemsdesk="1" data-itemstablet="1" data-itemsmobile="1" data-autoplay="true">
         <!-- Additional required wrapper -->
         <div class="swiper-wrapper">
 

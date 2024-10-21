@@ -55,11 +55,19 @@ $(window).on('load',function(){
         var itemsDesk = el.dataset.itemsdesk;
         var itemsTablet = el.dataset.itemstablet;
         var itemsMobile = el.dataset.itemsmobile;
+        var autoplay = el.dataset.autoplay
+
+        if(autoplay){
+            autoplayVl = true;
+        }else{
+            autoplayVl = false;
+        }
 
         new Swiper(el, {
             // Optional parameters
             direction: 'horizontal',
             loop: true,
+            autoplay: autoplayVl,
 
             // If we need pagination
             pagination: {
