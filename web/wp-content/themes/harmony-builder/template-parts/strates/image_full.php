@@ -1,6 +1,10 @@
 <?php
     $image          = get_sub_field('image');
     $imageArray     = get_custom_thumb($image);
+
+    $imageMobile          = get_sub_field('image_mobile');
+    $imageMobileArray     = get_custom_thumb($imageMobile);
+
     $image_format   = get_sub_field('image_format');
 
     $advanced       = get_advanced_fields();
@@ -14,7 +18,10 @@
 <div class="container-image-full <?= $classNames ?>" <?= $backgroundColor; ?>>
     <?= $backgroundCut; ?>
     <?php if($imageArray['url']): ?>
-        <img src="<?= $imageArray['url']; ?>" class="image-strate" alt="<?= $imageArray['alt']; ?>" width="<?= $imageArray['width']; ?>" height="<?= $imageArray['height']; ?>" loading="lazy">
+        <img src="<?= $imageArray['url']; ?>" class="image-strate <?= ($imageMobileArray['url']) ? 'hidden-xs' : ''; ?>" alt="<?= $imageArray['alt']; ?>" width="<?= $imageArray['width']; ?>" height="<?= $imageArray['height']; ?>" loading="lazy">
+    <?php endif; ?>
+    <?php if($imageMobileArray['url']) : ?>
+        <img src="<?= $imageMobileArray['url']; ?>" class="image-strate visible-xs" alt="<?= $imageMobileArray['alt']; ?>" width="<?= $imageMobileArray['width']; ?>" height="<?= $imageMobileArray['height']; ?>" loading="lazy">
     <?php endif; ?>
 </div>
 <?php else: ?>
@@ -25,7 +32,10 @@
         <div class="row">
             <div class="col-sm-12">
                 <?php if($imageArray['url']): ?>
-                    <img src="<?= $imageArray['url']; ?>" class="image-strate" alt="<?= $imageArray['alt']; ?>" width="<?= $imageArray['width']; ?>" height="<?= $imageArray['height']; ?>" loading="lazy">
+                    <img src="<?= $imageArray['url']; ?>" class="image-strate <?= ($imageMobileArray['url']) ? 'hidden-xs' : ''; ?>" alt="<?= $imageArray['alt']; ?>" width="<?= $imageArray['width']; ?>" height="<?= $imageArray['height']; ?>" loading="lazy">
+                <?php endif; ?>
+                <?php if($imageMobileArray['url']) : ?>
+                    <img src="<?= $imageMobileArray['url']; ?>" class="image-strate visible-xs" alt="<?= $imageMobileArray['alt']; ?>" width="<?= $imageMobileArray['width']; ?>" height="<?= $imageMobileArray['height']; ?>" loading="lazy">
                 <?php endif; ?>
             </div>
         </div>
