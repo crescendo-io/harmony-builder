@@ -12,7 +12,7 @@ $backgroundCut = get_background_cut($advanced);
 <div class="strate container-slider-logo <?= $classNames ?>" <?= $backgroundColor; ?>>
     <?= $backgroundCut; ?>
 
-    <div class="swiper" data-itemsdesk="6" data-itemstablet="3" data-itemsmobile="2">
+    <div class="swiper" data-itemsdesk="6" data-itemstablet="3" data-itemsmobile="2.6">
         <!-- Additional required wrapper -->
         <div class="swiper-wrapper">
 
