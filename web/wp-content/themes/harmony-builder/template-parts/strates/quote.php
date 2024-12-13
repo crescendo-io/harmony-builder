@@ -65,6 +65,8 @@ $backgroundCut = get_background_cut($advanced);
             <?php endforeach; ?>
 
         </div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
         <div class="swiper-pagination"></div>
 
 
