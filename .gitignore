@@ -69,6 +69,7 @@ web/wp-content/wp-cache-config.php
 web/wp-content/uploads/
 web/wp-content/languages/themes/*-backup-*
 web/wp-config.php
+web/wp-content/plugins/woocommerce
 
 # Front
 web/wp-content/themes/foxagency
