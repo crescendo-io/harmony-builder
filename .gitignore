@@ -70,6 +70,9 @@ web/wp-content/uploads/
 web/wp-content/languages/themes/*-backup-*
 web/wp-config.php
 web/wp-content/plugins/woocommerce
+web/wp-content/plugins/woocommerce-gateway-stripe
+web/wp-content/plugins/woocommerce-payments/
+web/wp-content/languages/
 
 # Front
 web/wp-content/themes/foxagency
