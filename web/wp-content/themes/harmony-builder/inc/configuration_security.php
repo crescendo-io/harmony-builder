@@ -55,10 +55,13 @@ function disable_x_pingback($headers) {
     return $headers;
 }
 
+
 //SECURITY : disable REST API
 add_filter('rest_api_init', 'rest_only_for_authorized_users', 99);
 function rest_only_for_authorized_users($wp_rest_server){
-    if (!is_user_logged_in()) {
+    $theme = wp_get_theme();
+    
+    if (!is_user_logged_in() && $theme->get('Name') != 'Ta kifé') {
         wp_die('La parole est d\'argent, le silence est d\'or...','Non autorisé',403);
     }
 }
