@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the Plugins - Yoast SEO - Stable (latest release) package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2024-12-18 15:38:51+0000\n"
+"PO-Revision-Date: 2025-01-27 17:45:26+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -18,12 +18,12 @@ msgstr "Non analysé"
 #. translators: %s: Yoast SEO.
 #: wp-seo-main.php:564
 msgid "%s activation failed"
-msgstr "L’activation de %s a échoué"
+msgstr "Activation échouée : %s"
 
 #. translators: %s: Yoast SEO.
 #: src/presenters/admin/migration-error-presenter.php:42
 msgid "%s is unable to create database tables"
-msgstr "%s n’est pas en mesure de créer des tables dans la base de données"
+msgstr "%s est incapable de créer les tables de la base de données"
 
 #: src/presenters/admin/sidebar-presenter.php:81 js/dist/block-editor.js:27
 #: js/dist/classic-editor.js:12 js/dist/elementor.js:12
@@ -229,10 +229,6 @@ msgstr "Augmentez les clics sur Google avec des résultats enrichis"
 msgid "Write product pages that rank using the SEO analysis"
 msgstr "Rédiger des pages de produits qui se classent à l’aide de l’analyse SEO"
 
-#: admin/views/licenses.php:69
-msgid "Get XML sitemaps"
-msgstr "Obtenir des sitemaps XML"
-
 #: admin/views/licenses.php:55
 msgid "Optimize your video previews & thumbnails"
 msgstr "Optimisez les aperçus et les miniatures de vos vidéos"
@@ -262,17 +258,6 @@ msgstr "Démarquez-vous dans les recherches locales"
 #: js/dist/post-edit.js:20 js/dist/support.js:22 js/dist/term-edit.js:20
 msgid "Explore %s now!"
 msgstr "Explorer %s maintenant !"
-
-#. translators: %1$s expands to a strong opening tag, %2$s expands to a strong
-#. closing tag.
-#: admin/class-premium-upsell-admin-block.php:88 admin/views/licenses.php:216
-#: js/dist/block-editor.js:33 js/dist/classic-editor.js:18
-#: js/dist/editor-modules.js:180 js/dist/elementor.js:18
-#: js/dist/externals-components.js:148 js/dist/general-page.js:23
-#: js/dist/introductions.js:19 js/dist/new-settings.js:21
-#: js/dist/post-edit.js:19 js/dist/support.js:21 js/dist/term-edit.js:19
-msgid "%1$s24/7 support%2$s: Also on evenings and weekends."
-msgstr "%1$sSupport 24/7%2$s : Egalement le soir et le week-end."
 
 #. translators: %1$s expands to a strong opening tag, %2$s expands to a strong
 #. closing tag.
@@ -329,6 +314,21 @@ msgstr "%1$sPlusieurs mots-clés%2$s : Obtenez un meilleur classement pour un p
 msgid "%1$sAI%2$s: Better SEO titles and meta descriptions, faster."
 msgstr "%1$sAI%2$s : De meilleurs titres et méta descriptions pour le référencement, plus rapidement."
 
+#. translators: %1$s expands to a strong opening tag, %2$s expands to a strong
+#. closing tag.
+#: admin/class-premium-upsell-admin-block.php:88 admin/views/licenses.php:216
+#: js/dist/block-editor.js:33 js/dist/classic-editor.js:18
+#: js/dist/editor-modules.js:180 js/dist/elementor.js:18
+#: js/dist/externals-components.js:148 js/dist/general-page.js:23
+#: js/dist/introductions.js:19 js/dist/new-settings.js:21
+#: js/dist/post-edit.js:19 js/dist/support.js:21 js/dist/term-edit.js:19
+msgid "%1$s24/7 support%2$s: Also on evenings and weekends."
+msgstr "%1$sSupport 24/7%2$s : Également le soir et le weekend."
+
+#: admin/views/licenses.php:69
+msgid "Get XML sitemaps"
+msgstr "Obtenir des plans de site XML"
+
 #: admin/watchers/class-slug-change-watcher.php:68
 msgid "Search engines and other websites can still send traffic to your trashed content."
 msgstr "Les moteurs de recherche et d’autres sites peuvent continuer à envoyer du trafic à votre contenu dans la corbeille."
@@ -337,11 +337,11 @@ msgstr "Les moteurs de recherche et d’autres sites peuvent continuer à envoye
 #. closing tag.
 #: src/presenters/admin/woocommerce-beta-editor-presenter.php:53
 msgid "The %1$s interface is currently unavailable in the beta WooCommerce product editor. To resolve any issues, please disable the beta editor. %2$sLearn how to disable the beta WooCommerce product editor.%3$s"
-msgstr "L‘interface de %1$s est actuellement indisponible dans la version bêta de l‘éditeur de produits de WooCommerce. Pour résoudre tout problème, veuillez désactiver l'éditeur bêta. %2$sApprendre à désactiver l'éditeur bêta de produits de WooCommerce.%3$s"
+msgstr "L‘interface de %1$s est actuellement indisponible dans la version bêta de l‘éditeur de produits de WooCommerce. Pour résoudre tout problème, veuillez désactiver l‘éditeur bêta. %2$sApprendre à désactiver l‘éditeur bêta de produits de WooCommerce.%3$s"
 
 #: src/presenters/admin/woocommerce-beta-editor-presenter.php:50
 msgid "Compatibility issue: Yoast SEO is incompatible with the beta WooCommerce product editor."
-msgstr "Problème de compatibilité : Yoast SEO est incompatible avec la version bêta de l'éditeur de produits de WooCommerce."
+msgstr "Problème de compatibilité : Yoast SEO est incompatible avec la version bêta de l‘éditeur de produits de WooCommerce."
 
 #: src/presenters/admin/sidebar-presenter.php:73 js/dist/block-editor.js:25
 #: js/dist/classic-editor.js:10 js/dist/elementor.js:10
@@ -511,7 +511,7 @@ msgstr "Attirez plus de clients vers votre site et votre boutique physique"
 
 #: src/presenters/admin/indexing-notification-presenter.php:93
 msgid "It looks like you've enabled media pages. We recommend that you help us to re-analyze your site by running the SEO data optimization."
-msgstr "Il semblerait que vous ayez activé les pages de média. Nous vous recommandons de nous aider à ré-analyser votre site en lançant l’optimisation des données SEO."
+msgstr "Il semblerait que vous ayez activé les pages de média. Nous vous recommandons de nous aider à réanalyser votre site en lançant l’optimisation des données SEO."
 
 #. translators: CTA to finish the first time configuration. %s: Either
 #. first-time SEO configuration or SEO configuration.
@@ -520,7 +520,7 @@ msgid "Finish your %s"
 msgstr "Finissez votre %s"
 
 #: inc/class-wpseo-rank.php:156 inc/class-wpseo-rank.php:245
-#: js/dist/block-editor.js:545 js/dist/editor-modules.js:322
+#: js/dist/block-editor.js:538 js/dist/editor-modules.js:315
 #: js/dist/elementor.js:94 js/dist/externals-components.js:188
 #: js/dist/externals-components.js:279
 #: js/dist/frontend-inspector-resources.js:1 js/dist/post-edit.js:25
@@ -695,13 +695,13 @@ msgstr "La publication %s ne peut pas être indexée car son type de publication
 msgid "The post %s could not be indexed because it does not meet indexing requirements."
 msgstr "La publication %s ne peut pas être indexée car elle n’atteint pas les prérequis d’indexation."
 
-#: src/presenters/admin/indexing-notification-presenter.php:87
-msgid "We need to re-analyze some of your SEO data because of a change in the visibility of your post types. Please help us do that by running the SEO data optimization."
-msgstr "Nous devons analyser une partie de vos données SEO à nouveau suite à changement de visibilité sur vos types de publication. Aidez-nous à le faire en lançant une optimisation des données SEO."
-
 #: src/presenters/admin/indexing-notification-presenter.php:90
 msgid "We need to re-analyze some of your SEO data because of a change in the visibility of your taxonomies. Please help us do that by running the SEO data optimization."
 msgstr "Nous devons analyser une partie de vos données SEO à nouveau suite à changement de visibilité sur vos taxonomies. Aidez-nous à le faire en lançant une optimisation des données SEO."
+
+#: src/presenters/admin/indexing-notification-presenter.php:87
+msgid "We need to re-analyze some of your SEO data because of a change in the visibility of your post types. Please help us do that by running the SEO data optimization."
+msgstr "Nous devons analyser une partie de vos données SEO à nouveau suite à changement de visibilité sur vos types de publications. Aidez-nous à le faire en lançant une optimisation des données SEO."
 
 #: admin/views/class-yoast-feature-toggles.php:210 js/dist/new-settings.js:310
 #: js/dist/post-edit.js:28
@@ -1098,6 +1098,7 @@ msgstr "Lorsque vous aurez la certitude que votre site fonctionne correctement a
 msgid "Please select an SEO plugin below to see what data can be imported."
 msgstr "Veuillez sélectionner une extension SEO ci-dessous pour voir les données éligibles à l’importation."
 
+#: admin/views/tool-import-export.php:35
 #: src/integrations/admin/import-integration.php:107
 msgid "Clean up"
 msgstr "Nettoyer"
@@ -1325,7 +1326,7 @@ msgid "Find relevant data about your content right in the Insights section in th
 msgstr "Trouvez des données pertinentes sur votre contenu directement dans la section « Stats » de l’encart Yoast SEO. Vous verrez les expressions que vous utilisez le plus et si elles correspondent à vos mots-clés ! "
 
 #: admin/views/class-yoast-feature-toggles.php:116 js/dist/block-editor.js:245
-#: js/dist/block-editor.js:553 js/dist/classic-editor.js:230
+#: js/dist/block-editor.js:546 js/dist/classic-editor.js:230
 #: js/dist/elementor.js:121 js/dist/new-settings.js:38
 #: js/dist/new-settings.js:310
 msgid "Insights"
@@ -1888,8 +1889,8 @@ msgstr "Nous avons des formations gratuites et payantes pour vous apprendre le r
 msgid "Check out %1$s"
 msgstr "Jetez un œil à %1$s"
 
-#: admin/metabox/class-metabox.php:427 js/dist/block-editor.js:578
-#: js/dist/elementor.js:545 js/dist/new-settings.js:33
+#: admin/metabox/class-metabox.php:427 js/dist/block-editor.js:571
+#: js/dist/elementor.js:538 js/dist/new-settings.js:33
 #: js/dist/new-settings.js:38 js/dist/new-settings.js:42
 #: js/dist/new-settings.js:69 js/dist/new-settings.js:252
 msgid "Schema"
@@ -2047,9 +2048,9 @@ msgstr "Liens internes reçus"
 msgid "Outgoing internal links"
 msgstr "Liens internes émis"
 
-#: admin/class-meta-columns.php:121 js/dist/block-editor.js:170
-#: js/dist/classic-editor.js:155 js/dist/editor-modules.js:298
-#: js/dist/elementor.js:515 js/dist/wincher-dashboard-widget.js:118
+#: admin/class-meta-columns.php:132 js/dist/block-editor.js:170
+#: js/dist/classic-editor.js:155 js/dist/editor-modules.js:291
+#: js/dist/elementor.js:508 js/dist/wincher-dashboard-widget.js:118
 msgid "Keyphrase"
 msgstr "Requête"
 
@@ -2158,7 +2159,7 @@ msgid "%s is a required feature toggle argument."
 msgstr "%s est un argument d’activation de fonctionnalité obligatoire."
 
 #. translators: Hidden accessibility text.
-#: admin/class-meta-columns.php:186
+#: admin/class-meta-columns.php:197
 msgid "Focus keyphrase not set."
 msgstr "Requête cible non définie."
 
@@ -2207,7 +2208,7 @@ msgstr[1] "%d heures"
 #. translators: %d expands to the number of day/days.
 #: src/integrations/blocks/structured-data-blocks.php:135
 #: js/dist/block-editor.js:149 js/dist/classic-editor.js:134
-#: js/dist/editor-modules.js:277 js/dist/elementor.js:494
+#: js/dist/editor-modules.js:270 js/dist/elementor.js:487
 #: js/dist/how-to-block.js:5 js/dist/how-to-block.js:8
 #: js/dist/wincher-dashboard-widget.js:43
 msgid "%d day"
@@ -2733,26 +2734,27 @@ msgstr "Ancien assistant de configuration"
 #: src/integrations/admin/workouts-integration.php:245
 #: src/presenters/admin/help-link-presenter.php:76 js/dist/academy.js:9
 #: js/dist/block-editor.js:19 js/dist/block-editor.js:23
-#: js/dist/block-editor.js:25 js/dist/block-editor.js:546
-#: js/dist/block-editor.js:547 js/dist/classic-editor.js:4
+#: js/dist/block-editor.js:25 js/dist/block-editor.js:539
+#: js/dist/block-editor.js:540 js/dist/classic-editor.js:4
 #: js/dist/classic-editor.js:8 js/dist/classic-editor.js:10
 #: js/dist/elementor.js:4 js/dist/elementor.js:8 js/dist/elementor.js:10
-#: js/dist/externals-components.js:45 js/dist/externals-components.js:191
+#: js/dist/externals-components.js:21 js/dist/externals-components.js:191
 #: js/dist/externals-components.js:195 js/dist/externals-components.js:197
 #: js/dist/externals/componentsNew.js:1043 js/dist/externals/helpers.js:6
-#: js/dist/general-page.js:8 js/dist/general-page.js:12
-#: js/dist/general-page.js:14 js/dist/integrations-page.js:3
-#: js/dist/integrations-page.js:4 js/dist/integrations-page.js:5
-#: js/dist/integrations-page.js:6 js/dist/integrations-page.js:7
-#: js/dist/integrations-page.js:8 js/dist/integrations-page.js:13
-#: js/dist/integrations-page.js:18 js/dist/integrations-page.js:19
-#: js/dist/integrations-page.js:20 js/dist/introductions.js:4
-#: js/dist/introductions.js:8 js/dist/introductions.js:10
-#: js/dist/new-settings.js:6 js/dist/new-settings.js:10
-#: js/dist/new-settings.js:12 js/dist/post-edit.js:4 js/dist/post-edit.js:8
-#: js/dist/post-edit.js:10 js/dist/support.js:6 js/dist/support.js:10
-#: js/dist/support.js:12 js/dist/support.js:24 js/dist/term-edit.js:4
-#: js/dist/term-edit.js:8 js/dist/term-edit.js:10
+#: js/dist/externals/relatedKeyphraseSuggestions.js:3
+#: js/dist/externals/relatedKeyphraseSuggestions.js:7 js/dist/general-page.js:8
+#: js/dist/general-page.js:12 js/dist/general-page.js:14
+#: js/dist/integrations-page.js:3 js/dist/integrations-page.js:4
+#: js/dist/integrations-page.js:5 js/dist/integrations-page.js:6
+#: js/dist/integrations-page.js:7 js/dist/integrations-page.js:8
+#: js/dist/integrations-page.js:13 js/dist/integrations-page.js:18
+#: js/dist/integrations-page.js:19 js/dist/integrations-page.js:20
+#: js/dist/introductions.js:4 js/dist/introductions.js:8
+#: js/dist/introductions.js:10 js/dist/new-settings.js:6
+#: js/dist/new-settings.js:10 js/dist/new-settings.js:12 js/dist/post-edit.js:4
+#: js/dist/post-edit.js:8 js/dist/post-edit.js:10 js/dist/support.js:6
+#: js/dist/support.js:10 js/dist/support.js:12 js/dist/support.js:24
+#: js/dist/term-edit.js:4 js/dist/term-edit.js:8 js/dist/term-edit.js:10
 msgid "(Opens in a new browser tab)"
 msgstr "(S’ouvre dans un nouvel onglet)"
 
@@ -2793,12 +2795,12 @@ msgstr "Non activé"
 msgid "Activated"
 msgstr "Activé"
 
-#: admin/class-meta-columns.php:291
+#: admin/class-meta-columns.php:302
 msgid "All Readability Scores"
 msgstr "Tous les scores de lisibilité"
 
 #. translators: Hidden accessibility text.
-#: admin/class-meta-columns.php:287
+#: admin/class-meta-columns.php:298
 msgid "Filter by Readability Score"
 msgstr "Filtrer par score de lisibilité"
 
@@ -2840,7 +2842,7 @@ msgstr "Nombre de liens internes DEPUIS cette publication. Regardez le texte «�
 msgid "%s Columns"
 msgstr "Colonnes %s"
 
-#: admin/class-meta-columns.php:111 admin/class-meta-columns.php:113
+#: admin/class-meta-columns.php:122 admin/class-meta-columns.php:124
 #: admin/taxonomy/class-taxonomy-columns.php:92
 #: admin/taxonomy/class-taxonomy-columns.php:93
 msgid "Readability score"
@@ -2866,9 +2868,9 @@ msgid "The plugin %2$s changes your site's output and in doing that differentiat
 msgstr "L’extension %2$s modifie l’apparence de votre site et, ce faisant, elle diffère entre les moteurs de recherche et les utilisateurs normaux, c’est un processus qui se nomme cloaking. Nous vous recommandons vivement de la désactiver."
 
 #: admin/class-premium-popup.php:89 js/dist/block-editor.js:286
-#: js/dist/block-editor.js:540 js/dist/classic-editor.js:271
-#: js/dist/classic-editor.js:525 js/dist/elementor.js:91
-#: js/dist/elementor.js:545 js/dist/externals-components.js:240
+#: js/dist/block-editor.js:533 js/dist/classic-editor.js:271
+#: js/dist/classic-editor.js:518 js/dist/elementor.js:91
+#: js/dist/elementor.js:538 js/dist/externals-components.js:240
 #: js/dist/externals-components.js:242
 msgid "1 year free support and updates included!"
 msgstr "1 an de mises à jour et de support offert !"
@@ -2894,7 +2896,7 @@ msgstr "Tout enregistrer"
 msgid "Save"
 msgstr "Enregistrer"
 
-#: admin/views/partial-notifications-warnings.php:22 js/dist/general-page.js:32
+#: admin/views/partial-notifications-warnings.php:22 js/dist/general-page.js:31
 msgid "No new notifications."
 msgstr "Aucune nouvelle notification."
 
@@ -3074,7 +3076,7 @@ msgid "Get Premium"
 msgstr "Passer à la version premium"
 
 #: admin/views/partial-notifications-warnings.php:20
-#: inc/class-wpseo-admin-bar-menu.php:400 js/dist/general-page.js:32
+#: inc/class-wpseo-admin-bar-menu.php:400 js/dist/general-page.js:31
 msgid "Notifications"
 msgstr "Notifications"
 
@@ -3118,7 +3120,7 @@ msgstr "Retire l’onglet de l’analyse de lisibilité du gestionnaire de méta
 #: admin/statistics/class-statistics-service.php:217
 #: inc/class-wpseo-rank.php:140 inc/class-wpseo-rank.php:176
 #: inc/class-wpseo-rank.php:208 inc/class-wpseo-rank.php:240
-#: js/dist/block-editor.js:545 js/dist/editor-modules.js:322
+#: js/dist/block-editor.js:538 js/dist/editor-modules.js:315
 #: js/dist/elementor.js:94 js/dist/externals-components.js:188
 #: js/dist/externals/analysis.js:11 js/dist/frontend-inspector-resources.js:1
 #: js/dist/general-page.js:1 js/dist/post-edit.js:25 js/dist/term-edit.js:1
@@ -3131,35 +3133,35 @@ msgstr "À améliorer"
 msgid "Readability analysis"
 msgstr "Analyse de lisibilité"
 
-#: admin/views/partial-notifications-errors.php:21 js/dist/general-page.js:32
+#: admin/views/partial-notifications-errors.php:21 js/dist/general-page.js:31
 msgid "We have detected the following issues that affect the SEO of your site."
 msgstr "Nous avons détecté les problèmes suivants qui affectent le référencement de votre site."
 
-#: inc/class-wpseo-rank.php:138 js/dist/block-editor.js:545
-#: js/dist/editor-modules.js:322 js/dist/elementor.js:94
+#: inc/class-wpseo-rank.php:138 js/dist/block-editor.js:538
+#: js/dist/editor-modules.js:315 js/dist/elementor.js:94
 #: js/dist/externals-components.js:188
 #: js/dist/frontend-inspector-resources.js:1 js/dist/post-edit.js:25
 #: js/dist/term-edit.js:1
 msgid "Not available"
 msgstr "Non disponible"
 
-#: admin/views/partial-notifications-errors.php:22 js/dist/general-page.js:32
+#: admin/views/partial-notifications-errors.php:22 js/dist/general-page.js:31
 msgid "Good job! We could detect no serious SEO problems."
 msgstr "Beau travail ! Nous n’avons détecté aucun problème sérieux de référencement."
 
 #: admin/views/partial-notifications-errors.php:20
 #: js/dist/editor-modules.js:181 js/dist/externals-components.js:188
-#: js/dist/externals/analysisReport.js:41 js/dist/general-page.js:32
+#: js/dist/externals/analysisReport.js:41 js/dist/general-page.js:31
 msgid "Problems"
 msgstr "Problèmes"
 
 #. translators: Hidden accessibility text.
-#: admin/class-meta-columns.php:258
+#: admin/class-meta-columns.php:269
 msgid "Filter by SEO Score"
 msgstr "Filtrer par score SEO"
 
 #. translators: Hidden accessibility text.
-#: admin/class-meta-columns.php:170
+#: admin/class-meta-columns.php:181
 msgid "Meta description not set."
 msgstr "La méta description n’est pas définie."
 
@@ -3262,7 +3264,7 @@ msgstr "No index"
 msgid "The separator defined in your theme's %s tag."
 msgstr "Le séparateur défini dans la balise %s de votre thème."
 
-#: admin/class-meta-columns.php:103 admin/class-meta-columns.php:105
+#: admin/class-meta-columns.php:114 admin/class-meta-columns.php:116
 #: admin/taxonomy/class-taxonomy-columns.php:87
 #: admin/taxonomy/class-taxonomy-columns.php:88
 #: inc/class-wpseo-admin-bar-menu.php:244
@@ -3302,7 +3304,7 @@ msgstr "Erreur 404 : Page introuvable"
 
 #. Plugin Name of the plugin
 #: wp-seo.php admin/capabilities/class-capability-manager-integration.php:74
-#: src/presenters/meta-description-presenter.php:36 js/dist/block-editor.js:610
+#: src/presenters/meta-description-presenter.php:36 js/dist/block-editor.js:603
 msgid "Yoast SEO"
 msgstr "Yoast SEO"
 
@@ -3325,7 +3327,7 @@ msgstr "Les chiffres ne sont pas acceptés"
 #: admin/statistics/class-statistics-service.php:227
 #: inc/class-wpseo-rank.php:142 inc/class-wpseo-rank.php:186
 #: inc/class-wpseo-rank.php:218 inc/class-wpseo-rank.php:250
-#: js/dist/block-editor.js:545 js/dist/editor-modules.js:322
+#: js/dist/block-editor.js:538 js/dist/editor-modules.js:315
 #: js/dist/elementor.js:94 js/dist/externals-components.js:188
 #: js/dist/externals/analysis.js:11 js/dist/frontend-inspector-resources.js:1
 #: js/dist/general-page.js:1 js/dist/post-edit.js:25 js/dist/term-edit.js:1
@@ -3512,6 +3514,7 @@ msgid "Import settings"
 msgstr "Importer les réglages"
 
 #: admin/views/tabs/tool/import-seo.php:88
+#: admin/views/tool-import-export.php:24
 msgid "Import"
 msgstr "Importer"
 
@@ -3795,18 +3798,18 @@ msgstr "L’extension %1$s pourrait provoquer des problèmes si utiliser en conj
 msgid "Deactivate %s"
 msgstr "Désactiver %s"
 
-#: admin/class-meta-columns.php:262
+#: admin/class-meta-columns.php:273
 msgid "All SEO Scores"
 msgstr "Tous les scores SEO"
 
-#: admin/class-meta-columns.php:118
+#: admin/class-meta-columns.php:129
 msgid "Meta Desc."
 msgstr "Méta Desc."
 
 #: admin/statistics/class-statistics-service.php:222
 #: inc/class-wpseo-rank.php:141 inc/class-wpseo-rank.php:181
-#: inc/class-wpseo-rank.php:213 js/dist/block-editor.js:545
-#: js/dist/editor-modules.js:322 js/dist/elementor.js:94
+#: inc/class-wpseo-rank.php:213 js/dist/block-editor.js:538
+#: js/dist/editor-modules.js:315 js/dist/elementor.js:94
 #: js/dist/externals-components.js:188 js/dist/externals/analysis.js:11
 #: js/dist/frontend-inspector-resources.js:1 js/dist/general-page.js:1
 #: js/dist/post-edit.js:25 js/dist/term-edit.js:1
@@ -3820,7 +3823,7 @@ msgstr "OK"
 #: js/dist/externals-components.js:191 js/dist/externals-components.js:195
 #: js/dist/externals-components.js:253 js/dist/externals/componentsNew.js:789
 #: js/dist/general-page.js:8 js/dist/general-page.js:12
-#: js/dist/general-page.js:24 js/dist/general-page.js:32
+#: js/dist/general-page.js:24 js/dist/general-page.js:31
 #: js/dist/introductions.js:4 js/dist/introductions.js:8
 #: js/dist/new-settings.js:6 js/dist/new-settings.js:10
 #: js/dist/new-settings.js:22 js/dist/new-settings.js:45 js/dist/post-edit.js:4
@@ -3906,8 +3909,9 @@ msgid "Publication date"
 msgstr "Date de Publication"
 
 #: admin/class-bulk-editor-list-table.php:866 js/dist/block-editor.js:149
-#: js/dist/classic-editor.js:134 js/dist/editor-modules.js:277
-#: js/dist/elementor.js:494 js/dist/wincher-dashboard-widget.js:43
+#: js/dist/classic-editor.js:134 js/dist/editor-modules.js:270
+#: js/dist/elementor.js:487 js/dist/general-page.js:1
+#: js/dist/wincher-dashboard-widget.js:43
 #: js/dist/wincher-dashboard-widget.js:112
 msgid "View"
 msgstr "Voir"
@@ -4042,7 +4046,7 @@ msgstr "Avertissement : même si vous pouvez modifier les méta « robots » 
 msgid "XML sitemaps"
 msgstr "Plans de site XML"
 
-#: admin/class-meta-columns.php:817
+#: admin/class-meta-columns.php:828
 msgid "Post is set to noindex."
 msgstr "La publication est réglée sur noindex."
 
@@ -4081,7 +4085,7 @@ msgstr "Requête cible"
 msgid "The canonical URL that this page should point to. Leave empty to default to permalink. %1$sCross domain canonical%2$s supported too."
 msgstr "L’URL canonique vers laquelle cette page devrait pointer. Laissez ce champ vide pour utiliser le slug par défaut. Les %1$sURL canoniques vers d’autres domaines%2$s sont aussi prises en charge."
 
-#: admin/class-meta-columns.php:117
+#: admin/class-meta-columns.php:128
 msgid "SEO Title"
 msgstr "Titre SEO"
 
