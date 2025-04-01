@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the Plugins - CookieYes &#8211; Cookie Banner for Cookie Consent (Easy to setup GDPR/CCPA Compliant Cookie Notice) - Stable (latest release) package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2025-02-07 13:59:22+0000\n"
+"PO-Revision-Date: 2025-02-21 18:34:55+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -1790,11 +1790,6 @@ msgstr "Personnaliser les boutons"
 msgid "Cookie Bar Colour"
 msgstr "Couleur du bandeau de cookies"
 
-#: legacy/admin/views/admin-settings-messagebar.php:128
-#: legacy/admin/views/admin-settings-messagebar.php:138
-msgid "Sticky"
-msgstr "Èpinglé"
-
 #: legacy/admin/views/admin-settings-messagebar.php:127
 #: legacy/admin/views/admin-settings-messagebar.php:137
 msgid "Animate"
@@ -1859,3 +1854,8 @@ msgstr "Ce bouton/lien peut être personnalisé pour fermer simplement la barre 
 #: legacy/admin/modules/cookies/cookies.php:128
 msgid "Nothing found"
 msgstr "Aucun résultat"
+
+#: legacy/admin/views/admin-settings-messagebar.php:128
+#: legacy/admin/views/admin-settings-messagebar.php:138
+msgid "Sticky"
+msgstr "Épinglé"
