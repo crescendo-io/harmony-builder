@@ -28,6 +28,8 @@
 
         </div>
     </div>
+
+    <?php if($cards_items): ?>
     <div class="swiper" data-itemsdesk="4.2" data-itemstablet="3" data-itemsmobile="1.3">
 
         <!-- Additional required wrapper -->
@@ -59,12 +61,13 @@
 
         </div>
 
-        <?php if(count($cards_items) > 4): ?>
+        <?php if($cards_items && count($cards_items) > 4): ?>
         <div class="swiper-pagination"></div>
         <div class="swiper-button-prev"></div>
         <div class="swiper-button-next"></div>
         <?php endif; ?>
 
     </div>
+    <?php endif; ?>
 </div>
 
