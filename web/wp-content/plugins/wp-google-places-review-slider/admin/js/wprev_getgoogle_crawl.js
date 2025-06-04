@@ -30,6 +30,9 @@
 	 */
 	 
 	 //document ready
+	 var businessname;
+	 var foundplaceid;
+	 var fromurl;
 	 $(function(){
 		 var placeid = '';
 		//function wpfbr_testapikey(pagename) {
@@ -79,10 +82,17 @@
 								$( '#businessimg' ).attr("src", objresponse.img);
 								}
 								$( '#businessname' ).html(objresponse.businessname);
+								businessname = objresponse.businessname;
+								foundplaceid = objresponse.foundplaceid;
+								fromurl = objresponse.googleurl;
+								console.log("businessname:"+businessname);
+								console.log("foundplaceid:"+foundplaceid);
+								
+								$( '#placeid' ).html(objresponse.foundplaceid);
 								$( '#website' ).html(objresponse.website);
 								$( '#googleurl' ).html(objresponse.googleurl);
 								$( '#googleurl' ).attr("href", objresponse.googleurl)
-								$( '#reviewtext' ).html('Rated <b>'+objresponse.rating+'</b> out of <b>'+objresponse.totalreviews+'</b>');
+								$( '#reviewtext' ).html('Rated <b>'+objresponse.rating+' out of '+objresponse.totalreviews);
 								$( '#downloadreviews' ).show();
 							}
 						} catch (e) {
@@ -103,14 +113,30 @@
 		
 		//for downloading on crawl page.
 		$("#downloadreviews").click(function(event){
-			
+			console.log("businessname:"+businessname);
+			//divgoogletestresults
 			//hide button
 			$( this ).hide();
 			//add class wprevloader to parent div
 			$( '#buttonloader2' ).show();
 			$( '#googletestresultstext2' ).html('');
 			
-			var placeid = $("#gplaceid").val();
+			if(foundplaceid){
+				var placeid = foundplaceid;
+			} else {
+				var placeid = $("#placeid").text();
+			}
+			if(businessname){
+				var tempbusinessn  = businessname;
+			} else {
+				var tempbusinessn = $("#businessname").text();
+			}
+			if(fromurl){
+				var tempfromurl  = fromurl;
+			} else {
+				var tempfromurl = $("#website").text();
+			}
+			
 			var newestorhelpful = $('input[name="sortoption"]:checked').val();
 			if(placeid==''){
 				alert("Please enter your Place ID or Search Terms.");
@@ -119,9 +145,12 @@
 			var data = {
 			action	:	'wpfbr_crawl_placeid_go',
 			gplaceid	:	placeid,
+			tempbusinessname	:	tempbusinessn,
+			gfromurl:tempfromurl,
 			nhful	: newestorhelpful,
 			_ajax_nonce		: adminjs_script_vars.wpfb_nonce,
 				};
+			console.log(data);
 			var myajax = jQuery.post(ajaxurl, data, function(response) {
 				console.log(response);
 					    try {

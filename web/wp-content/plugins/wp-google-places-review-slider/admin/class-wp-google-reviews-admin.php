@@ -1071,9 +1071,10 @@ class WP_Google_Reviews_Admin {
 				die();
 			}
 		}
-		
+
+
 		//check for block
-		if (strpos($serverresponse, "Please wait while your request is being verified") !== false || !isset($serverresponse) || $serverresponse=='' || strpos($serverresponse, "Access denied by Imunify360 bot-protection.") !== false) {
+		if (strpos($serverresponse, "Please wait while your request is being verified") !== false || !isset($serverresponse) || $serverresponse=='' || strpos($serverresponse, "Access denied by Imunify360 bot-protection.") !== false || strpos($serverresponse, "415 Unsupported Media Type") !== false) {
 		   //this site is greylisted by imunify360 on cloudways, call backup digital ocean server
 		   $tempurlvalue = 'https://ocean.ljapps.com/crawlrevs.php?rip='.$ip_server.'&surl='.$siteurl.'&stype=googlecheck&scrapequery='.urlencode($gplaceid).'&nobot=1&sfp=free';
 		   $response = wp_remote_get( $tempurlvalue, array( 'sslverify' => false, 'timeout' => 60 ) );
@@ -1149,16 +1150,21 @@ class WP_Google_Reviews_Admin {
 		$nhful = trim($_POST['nhful']);	//newest or relevant
 		
 		$savedplaceid ="";
+		$crawlpage=false;
+		
+		//print_r($_POST);
 		
 		if(isset($_POST['gplaceid'])){	//coming from the crawl page
 			$savedplaceid = trim($_POST['gplaceid']);
+			$tempbuname = trim($_POST['tempbusinessname']);
+			$tempfromurl = trim($_POST['gfromurl']);
+			$crawlpage=true;
 		}
 		
 		//if we are coming from getrevs page then we need to urldecode it
 		if(isset($_POST['getrevsplaceid'])){
 			$savedplaceid = trim(urldecode($_POST['getrevsplaceid']));
 		}
-
 		
 		//$checkdetails = json_decode(get_option('wprev_google_crawl_check'),true);
 		$crawlsarray = Array();
@@ -1168,7 +1174,6 @@ class WP_Google_Reviews_Admin {
 		//save newest or most helpful
 		$crawlsarray[$savedplaceid]['nhful'] = $nhful;
 		update_option('wprev_google_crawls',json_encode($crawlsarray) );
-		
 		
 		
 		if($checkdetails['idorquery'] == 'query' && $checkdetails['enteredterms']!=''){
@@ -1199,8 +1204,15 @@ class WP_Google_Reviews_Admin {
 		}
 		$siteurl = urlencode(get_site_url());
 
+		if($crawlpage==true && isset($tempbuname) && $tempbuname!=""){
+			$gplaceid=$savedplaceid;
+			$tempbusinessname=$tempbuname;
+			$checkdetails['googleurl'] = $tempfromurl;
+		}
 		
 		$tempurlvalue = 'https://crawl.ljapps.com/crawlrevs?rip='.$ip_server.'&surl='.$siteurl.'&stype=google&nhful='.$nhful.'&locationtype='.$locationtype.'&scrapequery='.urlencode($gplaceid).'&tempbusinessname='.urlencode($tempbusinessname).'&nobot=1&sfp=free';
+		
+		$results['tempurlvalue'] =$tempurlvalue;
 		
 		//echo $tempurlvalue;
 		//die();
@@ -1245,14 +1257,11 @@ class WP_Google_Reviews_Admin {
 			}
 		}
 
-
 		//check for block
-		if (strpos($serverresponse, "Please wait while your request is being verified") !== false || !isset($serverresponse) || $serverresponse=='' || strpos($serverresponse, "Access denied by Imunify360 bot-protection.") !== false) {
+		if (strpos($serverresponse, "Please wait while your request is being verified") !== false || !isset($serverresponse) || $serverresponse=='' || strpos($serverresponse, "Access denied by Imunify360 bot-protection.") !== false || strpos($serverresponse, "415 Unsupported Media Type") !== false) {
 		   //this site is greylisted by imunify360 on cloudways, call backup digital ocean server
 		   $tempurlvalue = 'https://ocean.ljapps.com/crawlrevs.php?rip='.$ip_server.'&surl='.$siteurl.'&stype=google&nhful='.$nhful.'&locationtype='.$locationtype.'&scrapequery='.urlencode($gplaceid).'&tempbusinessname='.urlencode($tempbusinessname).'&nobot=1&sfp=free';
-		   
-		   //echo $tempurlvalue;
-		   //die();
+
 		   
 		   $response = wp_remote_get( $tempurlvalue, array( 'sslverify' => false, 'timeout' => 60 ) );
 			if ( is_array( $response ) && ! is_wp_error( $response ) ) {
@@ -1370,7 +1379,7 @@ class WP_Google_Reviews_Admin {
 			{
 				$stats[] =array( 
 					'pageid' 			=> $gplaceid, 
-					'pagename' 			=> $checkdetails['businessname'], 
+					'pagename' 			=> $tempbusinessname, 
 					'created_time' 		=> date( "Y-m-d H:i:s", $results['created_time_stamp'] ),
 					'created_time_stamp' 	=> $results['created_time_stamp'],
 					'reviewer_name' 		=> $results['user_name'],
@@ -1402,7 +1411,7 @@ class WP_Google_Reviews_Admin {
 		//update total and avg for badges.
 				if(trim($gplaceid)!=''){
 					$temptype = 'google';
-					$this->updatetotalavgreviews($temptype, $gplaceid, $results['avg'], $results['total'],$checkdetails['businessname']);
+					$this->updatetotalavgreviews($temptype, $gplaceid, $results['avg'], $results['total'],$tempbusinessname);
 				}
 	
 		$results['ackmsg'] =sprintf( __('Success! <b>%d</b> Reviews found. <b>%d</b> New Reviews downloaded. Check Review List page for downloaded reviews. The Pro version can download all your reviews from multiple locations and automatically check for new reviews!', 'wp-google-reviews' ), $numreturned,$i );

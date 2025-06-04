@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the Plugins - CookieYes &#8211; Cookie Banner for Cookie Consent (Easy to setup GDPR/CCPA Compliant Cookie Notice) - Stable (latest release) package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2025-02-21 18:34:55+0000\n"
+"PO-Revision-Date: 2025-05-02 20:01:43+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -129,9 +129,7 @@ msgid "Are you sure?"
 msgstr "Confirmez-vous ?"
 
 #: legacy/admin/modules/cookie-scaner/views/scan-results.php:33
-#: lite/admin/dist/js/chunk-4c559ba8.js:1
-#: lite/admin/dist/js/chunk-34d9d3aa.js:1
-#: lite/admin/dist/js/chunk-5742f02e.js:1
+#: lite/admin/dist/js/chunk-a2d3c996.js:1
 msgid "Total cookies"
 msgstr "Nombre total de cookies"
 
@@ -180,9 +178,6 @@ msgid "Scanner API is temporarily down please try again later."
 msgstr "L’API de l’outil d’analyse est temporairement indisponible, veuillez réessayer ultérieurement."
 
 #: legacy/admin/modules/cookie-scaner/cookie-scaner.php:1200
-#: lite/admin/dist/js/chunk-15193e07.js:1
-#: lite/admin/dist/js/chunk-36647818.js:1
-#: lite/admin/dist/js/chunk-bdc06ad6.js:1
 msgid "Scan website for cookies"
 msgstr "Analyse des cookies sur le site"
 
@@ -387,19 +382,13 @@ msgid "Disconnected from CookieYes"
 msgstr "Déconnexion de CookieYes"
 
 #: legacy/includes/class-cookie-law-info-cookieyes.php:174
-#: lite/admin/dist/js/chunk-7ea7e6e9.js:1
-#: lite/admin/dist/js/chunk-91df1cbe.js:1
+#: lite/admin/dist/js/chunk-389f4675.js:1
 msgid "Disconnect"
 msgstr "Déconnexion"
 
 #: legacy/includes/class-cookie-law-info-cookieyes.php:172
 msgid "Connected to CookieYes"
 msgstr "Connecté à CookieYes"
-
-#: legacy/includes/class-cookie-law-info-cookieyes.php:156
-#: legacy/includes/class-cookie-law-info-cookieyes.php:204
-msgid "Invalid request"
-msgstr "Demande incorrecte"
 
 #: legacy/public/views/cookie-law-info_bar.php:55
 msgid "Powered by"
@@ -408,9 +397,7 @@ msgstr "Propulsé par"
 #: legacy/admin/modules/cookie-scaner/views/scan-results.php:72
 #: legacy/admin/modules/cookies/cookies.php:250
 #: legacy/public/modules/script-blocker/views/settings.php:163
-#: lite/admin/dist/js/chunk-15193e07.js:1
-#: lite/admin/dist/js/chunk-36647818.js:1
-#: lite/admin/dist/js/chunk-bdc06ad6.js:1
+#: lite/admin/dist/js/chunk-9f00afc6.js:1
 msgid "Category"
 msgstr "Catégorie"
 
@@ -454,18 +441,13 @@ msgstr "Adresse e-mail déjà vérifiée"
 #: legacy/includes/class-cookie-law-info-cookieyes.php:273
 #: legacy/includes/class-cookie-law-info-cookieyes.php:287
 #: legacy/includes/class-cookie-law-info-cookieyes.php:1070
-#: lite/admin/dist/js/chunk-7ea7e6e9.js:1
-#: lite/admin/dist/js/chunk-91df1cbe.js:1
+#: lite/admin/dist/js/chunk-389f4675.js:1
 msgid "Email"
 msgstr "Adresse e-mail"
 
 #: legacy/includes/class-cookie-law-info-cookieyes.php:205
 msgid "Successfully deleted!"
 msgstr "Suppression réussie !"
-
-#: legacy/admin/modules/cookies/cookies.php:805
-msgid "You no longer need to manage static cookie categories. After the migration, new cookie categories (Necessary, Functional, Analytics, Performance, Advertisement, and Others) will be created automatically. Also, you can easily add custom cookie categories and edit/delete the existing categories including the custom categories."
-msgstr "Il n’est plus nécessaire de gérer les catégories statiques de cookies. Après la migration, de nouvelles catégories de cookies (Necessary, Functional, Analytics, Performance, Advertisement, and Others) seront créées automatiquement. De plus, vous pouvez facilement créer, éditer et supprimer des catégories de cookies personnalisées et/ou existantes."
 
 #: legacy/includes/class-cookie-law-info-cookieyes.php:792
 msgid "Could not identify the action"
@@ -474,6 +456,10 @@ msgstr "Impossible d’identifier l’action"
 #: legacy/includes/class-cookie-law-info-cookieyes.php:275
 msgid "Send password reset email"
 msgstr "Envoyer un e-mail de réinitialisation de mot de passe"
+
+#: legacy/admin/modules/cookies/cookies.php:805
+msgid "You no longer need to manage static cookie categories. After the migration, new cookie categories (Necessary, Functional, Analytics, Performance, Advertisement, and Others) will be created automatically. Also, you can easily add custom cookie categories and edit/delete the existing categories including the custom categories."
+msgstr "Il n’est plus nécessaire de gérer les catégories statiques de cookies. Après la migration, de nouvelles catégories de cookies (Necessary, Functional, Analytics, Performance, Advertisement, and Others) seront créées automatiquement. De plus, vous pouvez facilement créer, éditer et supprimer des catégories de cookies personnalisées et/ou existantes."
 
 #: legacy/admin/modules/cookie-scaner/cookie-scaner.php:442
 #: legacy/admin/modules/cookie-scaner/cookie-scaner.php:1214
@@ -706,6 +692,11 @@ msgstr "Enregistrer & appliquer"
 msgid "Clicking “Connect & scan” will let you connect with a free <a href=\"%1$s\" target=\"_blank\">CookieYes</a> account and initiate scanning of your website for cookies. These cookies along with their description will be listed under the cookie declaration popup. By continuing, you agree to CookieYes's <a href=\"%2$s\" target=\"_blank\">Privacy Policy</a> & <a href=\"%3$s\" target=\"_blank\">Terms of service</a>."
 msgstr "Cliquer sur « Se connecter et analyser » va vous connecter à un compte gratuit <a href=\"%1$s\" target=\"_blank\">CookieYes</a> et démarrer une analyse des cookies de votre site web. Ces cookies et leur description seront listés sur la fenêtre surgissante de déclaration des cookies. En continuant, vous adhérez aux politiques suivantes de CookieYes : <a href=\"%2$s\" target=\"_blank\">Politique de confidentialité</a> et <a href=\"%3$s\" target=\"_blank\">Conditions d’utilisation</a>."
 
+#: legacy/includes/class-cookie-law-info-cookieyes.php:156
+#: legacy/includes/class-cookie-law-info-cookieyes.php:204
+msgid "Invalid request"
+msgstr "Requête invalide"
+
 #: legacy/admin/modules/uninstall-feedback/uninstall-feedback.php:150
 #: lite/admin/modules/uninstall-feedback/class-uninstall-feedback.php:254
 msgid "Privacy Policy"
@@ -760,16 +751,12 @@ msgid "Cookie bar is currently inactive"
 msgstr "La barre de cookie est actuellement inactive"
 
 #: legacy/public/modules/script-blocker/views/settings.php:197
-#: lite/admin/dist/js/chunk-4c559ba8.js:1
-#: lite/admin/dist/js/chunk-34d9d3aa.js:1
-#: lite/admin/dist/js/chunk-5742f02e.js:1
+#: lite/admin/dist/js/chunk-a2d3c996.js:1
 msgid "Inactive"
 msgstr "Inactif"
 
 #: legacy/public/modules/script-blocker/views/settings.php:160
-#: lite/admin/dist/js/chunk-15193e07.js:1
-#: lite/admin/dist/js/chunk-36647818.js:1
-#: lite/admin/dist/js/chunk-bdc06ad6.js:1
+#: lite/admin/dist/js/chunk-9f00afc6.js:1
 msgid "Name"
 msgstr "Références"
 
@@ -949,15 +936,10 @@ msgstr "Sélectionner le type de loi"
 #: legacy/admin/modules/ccpa/ccpa.php:105
 #: legacy/admin/modules/cookie-scaner/cookie-scaner.php:317
 #: legacy/admin/modules/uninstall-feedback/uninstall-feedback.php:159
-#: lite/admin/dist/js/chunk-1e0144df.js:1
-#: lite/admin/dist/js/chunk-3f2e57f0.js:1
-#: lite/admin/dist/js/chunk-7ea7e6e9.js:1
-#: lite/admin/dist/js/chunk-91df1cbe.js:1
-#: lite/admin/dist/js/chunk-15193e07.js:1
-#: lite/admin/dist/js/chunk-36647818.js:1
+#: lite/admin/dist/js/chunk-9f00afc6.js:1
+#: lite/admin/dist/js/chunk-389f4675.js:1
+#: lite/admin/dist/js/chunk-766366b8.js:1
 #: lite/admin/dist/js/chunk-bac749f6.js:1
-#: lite/admin/dist/js/chunk-bdc06ad6.js:1
-#: lite/admin/dist/js/chunk-d1feda2a.js:1
 msgid "Cancel"
 msgstr "Annuler"
 
@@ -1166,11 +1148,8 @@ msgid "Click"
 msgstr "Cliquez"
 
 #: legacy/admin/modules/cli-policy-generator/views/policy-generator.php:27
-#: lite/admin/dist/js/chunk-1e0144df.js:1
-#: lite/admin/dist/js/chunk-3f2e57f0.js:1
-#: lite/admin/dist/js/chunk-10044bd1.js:1
+#: lite/admin/dist/js/chunk-766366b8.js:1
 #: lite/admin/dist/js/chunk-bac749f6.js:1
-#: lite/admin/dist/js/chunk-d1feda2a.js:1
 msgid "Delete"
 msgstr "Supprimer"
 
@@ -1569,18 +1548,14 @@ msgstr "Recharger la page au clic sur le bouton de consentement"
 #: legacy/admin/modules/cookies/views/non-necessary-settings.php:55
 #: legacy/public/modules/script-blocker/views/settings.php:165
 #: legacy/public/modules/shortcode/shortcode.php:239
-#: lite/admin/dist/js/chunk-15193e07.js:1
-#: lite/admin/dist/js/chunk-36647818.js:1
-#: lite/admin/dist/js/chunk-bdc06ad6.js:1
+#: lite/admin/dist/js/chunk-9f00afc6.js:1
 msgid "Description"
 msgstr "Description"
 
 #: legacy/admin/modules/cookie-scaner/views/scan-results.php:71
 #: legacy/admin/modules/cookies/cookies.php:251
 #: legacy/public/modules/shortcode/shortcode.php:236
-#: lite/admin/dist/js/chunk-15193e07.js:1
-#: lite/admin/dist/js/chunk-36647818.js:1
-#: lite/admin/dist/js/chunk-bdc06ad6.js:1
+#: lite/admin/dist/js/chunk-9f00afc6.js:1
 msgid "Duration"
 msgstr "Durée"
 
@@ -1591,9 +1566,7 @@ msgstr "Type"
 
 #: legacy/admin/modules/cookies/cookies.php:121
 #: legacy/public/modules/shortcode/shortcode.php:230
-#: lite/admin/dist/js/chunk-15193e07.js:1
-#: lite/admin/dist/js/chunk-36647818.js:1
-#: lite/admin/dist/js/chunk-bdc06ad6.js:1
+#: lite/admin/dist/js/chunk-9f00afc6.js:1
 msgid "Cookie"
 msgstr "Cookie"
 
@@ -1610,9 +1583,7 @@ msgid "Add New Cookie Type"
 msgstr "Ajouter un nouveau type de Cookie"
 
 #: legacy/admin/modules/cookies/cookies.php:120 lite/admin/dist/js/app.js:1
-#: lite/admin/dist/js/chunk-15193e07.js:1
-#: lite/admin/dist/js/chunk-36647818.js:1
-#: lite/admin/dist/js/chunk-bdc06ad6.js:1
+#: lite/admin/dist/js/chunk-9f00afc6.js:1
 msgid "Cookie List"
 msgstr "Liste des Cookies"
 
@@ -1837,9 +1808,7 @@ msgstr "Spécifiez en millisecondes (et non en secondes)"
 
 #: legacy/admin/modules/cookies/cookies.php:179
 #: legacy/admin/modules/cookies/cookies.php:190
-#: lite/admin/dist/js/chunk-15193e07.js:1
-#: lite/admin/dist/js/chunk-36647818.js:1
-#: lite/admin/dist/js/chunk-bdc06ad6.js:1
+#: lite/admin/dist/js/chunk-9f00afc6.js:1
 msgid "Cookie ID"
 msgstr "ID du cookie :"
 
