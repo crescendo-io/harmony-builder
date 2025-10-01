@@ -147,6 +147,9 @@ class WPSEO_Option_Wpseo extends WPSEO_Option {
 		'site_kit_tracking_setup_widget_temporarily_dismissed' => 'no',
 		'site_kit_tracking_setup_widget_permanently_dismissed' => 'no',
 		'google_site_kit_feature_enabled'                      => false,
+		'ai_free_sparks_started_on'                            => null,
+		'enable_llms_txt'                                      => false,
+		'last_updated_on'                                      => false,
 	];
 
 	/**
@@ -345,6 +348,7 @@ class WPSEO_Option_Wpseo extends WPSEO_Option {
 				case 'site_kit_tracking_last_interaction_stage':
 				case 'site_kit_tracking_setup_widget_temporarily_dismissed':
 				case 'site_kit_tracking_setup_widget_permanently_dismissed':
+				case 'ai_free_sparks_started_on':
 					if ( isset( $dirty[ $key ] ) ) {
 						$clean[ $key ] = sanitize_text_field( $dirty[ $key ] );
 					}
@@ -397,6 +401,7 @@ class WPSEO_Option_Wpseo extends WPSEO_Option {
 				case 'first_activated_on':
 				case 'indexing_started':
 				case 'activation_redirect_timestamp_free':
+				case 'last_updated_on':
 					$clean[ $key ] = false;
 					if ( isset( $dirty[ $key ] ) ) {
 						if ( $dirty[ $key ] === false || WPSEO_Utils::validate_int( $dirty[ $key ] ) ) {
@@ -521,8 +526,9 @@ class WPSEO_Option_Wpseo extends WPSEO_Option {
 				 *  'should_redirect_after_install_free'
 				 *  'show_new_content_type_notification'
 				 *  'site_kit_configuration_permanently_dismissed',
-				 * 'site_kit_connected',
-				 * 'google_site_kit_feature_enabled',
+				 *  'site_kit_connected',
+				 *  'google_site_kit_feature_enabled',
+				 *  'enable_llms_txt',
 				 *  and most of the feature variables.
 				 */
 				default:
@@ -592,6 +598,7 @@ class WPSEO_Option_Wpseo extends WPSEO_Option {
 			'redirect_search_pretty_urls'        => false,
 			'algolia_integration_active'         => false,
 			'google_site_kit_feature_enabled'    => false,
+			'enable_llms_txt'                    => false,
 		];
 
 		// We can reuse this logic from the base class with the above defaults to parse with the correct feature values.

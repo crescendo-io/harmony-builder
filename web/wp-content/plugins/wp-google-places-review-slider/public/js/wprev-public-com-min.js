@@ -203,6 +203,25 @@ void 0!==jQuery.event.swipe||function(e){"function"==typeof define&&define.amd?d
 				});
 				//setTimeout(function(){ refreshFsLightbox(); }, 1000);
 			}
+
+		}
+		missingimgcheck();
+		function missingimgcheck(){
+			//remove images from the dom
+		  $('img.wprev_media_img').each(function () {
+			var $img = $(this);
+
+			// Remove immediately if already broken
+			if (!this.complete || this.naturalWidth === 0) {
+			  $img.remove();
+			  return; // skip binding error event
+			}
+
+			// Remove if load fails after DOM ready
+			$img.on('error', function () {
+			  $img.remove();
+			});
+		  });
 		}
 
 		

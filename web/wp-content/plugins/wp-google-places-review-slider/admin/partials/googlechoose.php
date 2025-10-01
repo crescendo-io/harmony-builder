@@ -28,30 +28,32 @@
     // show error/update messages
     settings_errors('wpfbr_messages');
 	
-	
 	//get previous crawls
-	//$googlecrawlsarray = Array();
-	//$googlecrawlsarray[] =Array("empty");
-	//$tempsaved = get_option('wprev_google_crawls');
-	//if($tempsaved!=''){
+	
 	if ( 'not-exists' === get_option( 'wprev_google_crawls', 'not-exists' ) ) {
 		update_option('wprev_google_crawls',json_encode(array(array())));
 	}
 	$googlecrawlsarray = json_decode(get_option('wprev_google_crawls'),true);
-	//}
+	
+	// Helper function to limit text to 200 characters
+	function limit_text($text, $limit = 100) {
+		if (strlen($text) > $limit) {
+			return substr($text, 0, $limit) . '...';
+		}
+		return $text;
+	}
+	
+//echo '<pre>';
+//print_r($googlecrawlsarray);
+//echo '</pre>';
 
 
 	//get previous apis if set.
-	//$googleapisarray = Array();
-	//$googleapisarray[] =Array("empty");
-	//$tempsaved = get_option('wprev_google_crawls');
-	//if($tempsaved!=''){
+	
 	if ( 'not-exists' === get_option( 'wprev_google_apis', 'not-exists' ) ) {
 		update_option('wprev_google_apis',json_encode(array(array())));
 	}
 	$googleapisarray = json_decode(get_option('wprev_google_apis'),true);
-	//}	
-
 	
 
 	//check if we need to delete a source here
@@ -104,6 +106,31 @@ include("tabmenu.php");
 //if(!isset($googlecrawlsarray[0])){
 ?>
 <div id='currentsources'>
+<style>
+#currentsources table {
+	max-width: 100%;
+	table-layout: fixed;
+	word-wrap: break-word;
+}
+#currentsources table td {
+	word-wrap: break-word;
+	word-break: break-all;
+	overflow-wrap: break-word;
+	max-width: 0;
+}
+#currentsources table td:first-child {
+	width: 30%;
+}
+#currentsources table td:nth-child(2) {
+	width: 25%;
+}
+#currentsources table td:nth-child(3) {
+	width: 20%;
+}
+#currentsources table td:last-child {
+	width: 25%;
+}
+</style>
 	  <table class="w3-table-all wpfbr_mb15 welcomediv w3-container w3-white w3-border w3-border-light-gray2 w3-round-small">
     <tr>
 	  <th>Business Name</th>
@@ -116,20 +143,102 @@ $crawlcount = 0;
 foreach ($googlecrawlsarray as $key =>$savedplace) {
 //echo "<br>key:".$key;
    // if(isset($key) && $key!=0 && $key!=""){
-	if(isset($savedplace['crawl_check']) && is_array($savedplace['crawl_check'])){
+	if(isset($savedplace['crawl_check']) && is_array($savedplace['crawl_check']) && !isset($savedplace['task_id'])){
 		$crawlcount++;
 		$tempbusines ="";
 		$tempfoundplaceid ="";
 		$nhful="";
 		
-				$tempbusiness = $savedplace['crawl_check']['businessname'];
-				$tempfoundplaceid = $savedplace['crawl_check']['foundplaceid'];
+				$tempbusiness = stripslashes($savedplace['crawl_check']['businessname'] ?? '');
+				$tempfoundplaceid = stripslashes($savedplace['crawl_check']['foundplaceid'] ?? '');
 				$nhful = $savedplace['nhful'];
 
-		echo "<tr><td> ".$tempbusiness ."</td><td>".$tempfoundplaceid."</td><td> Crawl : ".$savedplace['nhful'] ."</td><td> 
+		// Apply character limit to place ID before creating link
+		$tempfoundplaceid = limit_text($tempfoundplaceid);
+		$placeid_link = '';
+		if($tempfoundplaceid != '' && strpos($tempfoundplaceid, 'ChIJ') === 0) {
+			$placeid_link = '<a href="https://search.google.com/local/reviews?placeid='.urlencode($tempfoundplaceid).'" target="_blank" style="color: #1976d2; text-decoration: none;">'.$tempfoundplaceid.'</a>';
+		} else {
+			$placeid_link = $tempfoundplaceid;
+		}
+		
+		echo "<tr><td> ".limit_text($tempbusiness) ."</td><td>".$placeid_link."</td><td> Crawl : ".$savedplace['nhful'] ."</td><td> 
 		<a class='w3-button w3-red w3-padding-small' href='?page=wp_google-googlesettings&ract=del&place=".urlencode($key)."&placeid=".urlencode($tempfoundplaceid)."&type=crawl'>Delete</a>
-		<a class='w3-button w3-dark-grey w3-padding-small' href='".$urlgooglegooglecrawl."&ract=edit&place=".urlencode($key)."&placeid=".urlencode($tempfoundplaceid)."'>Edit</a>
-		<a class='downloadrevs w3-button w3-green w3-padding-small' data-type='crawl' data-placeid='".$tempfoundplaceid."' data-place='".urlencode($key)."' data-nhful='".urlencode($nhful)."'>Download Reviews</a>&nbsp;<img class='buttonloader2 loadinggifchoosepage' width='20' height='20' src='".plugin_dir_url( __FILE__ )."loading.gif' style='display:none;'><span class='googletestresults2'></span>
+		<a class='w3-button w3-green w3-padding-small' href='".$urlgooglegooglecrawl."&ract=edit&place=".urlencode($key)."&placeid=".urlencode($tempfoundplaceid)."'>Get Reviews</a>
+		&nbsp;<img class='buttonloader2 loadinggifchoosepage' width='20' height='20' src='".plugin_dir_url( __FILE__ )."loading.gif' style='display:none;'><span class='googletestresults2'></span>
+		</td></tr>";
+	}
+}
+
+// Display DataForSEO entries (those with enteredidorterms but no crawl_check)
+foreach ($googlecrawlsarray as $key => $savedplace) {
+	if(isset($savedplace['enteredidorterms']) && isset($savedplace['task_id'])){
+		$crawlcount++;
+		$tempbusiness = '';
+		$tempfoundplaceid = '';
+		
+		// Check if crawl_check exists before accessing it
+		if(isset($savedplace['crawl_check']) && is_array($savedplace['crawl_check'])) {
+			$tempbusiness = stripslashes($savedplace['crawl_check']['businessname'] ?? '');
+			$tempfoundplaceid = stripslashes($savedplace['crawl_check']['foundplaceid'] ?? '');
+		}
+		
+		// Fallback to enteredidorterms if business name is empty
+		if($tempbusiness == ''){
+			$tempbusiness = stripslashes($savedplace['enteredidorterms']); // Use the place ID as business name for now
+		}
+		
+		// Fallback to enteredidorterms if place ID is empty
+		if($tempfoundplaceid == ''){
+			$tempfoundplaceid = stripslashes($savedplace['enteredidorterms']);
+		}
+		$nhful = isset($savedplace['nhful']) ? $savedplace['nhful'] : 'relevant';
+		$task_id = isset($savedplace['task_id']) ? $savedplace['task_id'] : '';
+		$task_status = isset($savedplace['task_status']) ? $savedplace['task_status'] : '';
+		
+
+			$button_text = 'Get Reviews';
+			$button_class = 'w3-button w3-green w3-padding-small';
+			$button_action = 'download-reviews';
+
+		// Apply character limit to place ID before creating link
+		$tempfoundplaceid = limit_text($tempfoundplaceid);
+		$placeid_link = '';
+		if($tempfoundplaceid != '' && strpos($tempfoundplaceid, 'ChIJ') === 0) {
+			$placeid_link = '<a href="https://search.google.com/local/reviews?placeid='.urlencode($tempfoundplaceid).'" target="_blank" style="color: #1976d2; text-decoration: none;">'.$tempfoundplaceid.'</a>';
+		} else {
+			$placeid_link = $tempfoundplaceid;
+		}
+		
+		echo "<tr><td> ".limit_text($tempbusiness) ."</td><td>".$placeid_link."</td><td> Crawl Method : ".$nhful ."</td><td> 
+		<a class='w3-button w3-red w3-padding-small' href='?page=wp_google-googlesettings&ract=del&place=".urlencode($key)."&placeid=".urlencode($tempfoundplaceid)."&type=crawl'>Delete</a>
+		<a class='w3-button w3-green w3-padding-small' href='".$urlgooglegooglecrawl."&ract=edit&place=".urlencode($key)."&placeid=".urlencode($tempfoundplaceid)."'>Get Reviews</a>
+		&nbsp;<img class='buttonloader2 loadinggifchoosepage' width='20' height='20' src='".plugin_dir_url( __FILE__ )."loading.gif' style='display:none;'><span class='googletestresults2'></span>
+		</td></tr>";
+	}
+}
+
+// Display old format entries (those with only nhful and no crawl_check or task_id)
+foreach ($googlecrawlsarray as $key => $savedplace) {
+	if(isset($savedplace['nhful']) && !isset($savedplace['crawl_check']) && !isset($savedplace['task_id']) && $key != 0 && $key != ''){
+		$crawlcount++;
+		$tempbusiness = stripslashes($key); // Use the key as business name for old format
+		$tempfoundplaceid = stripslashes($key); // Use the key as place ID for old format
+		$nhful = $savedplace['nhful'];
+		
+		// Apply character limit to place ID before creating link
+		$tempfoundplaceid = limit_text($tempfoundplaceid);
+		$placeid_link = '';
+		if($tempfoundplaceid != '' && strpos($tempfoundplaceid, 'ChIJ') === 0) {
+			$placeid_link = '<a href="https://search.google.com/local/reviews?placeid='.urlencode($tempfoundplaceid).'" target="_blank" style="color: #1976d2; text-decoration: none;">'.$tempfoundplaceid.'</a>';
+		} else {
+			$placeid_link = $tempfoundplaceid;
+		}
+		
+		echo "<tr><td> ".limit_text($tempbusiness) ."</td><td>".$placeid_link."</td><td> Old Crawl Method : ".$nhful ."</td><td> 
+		<a class='w3-button w3-red w3-padding-small' href='?page=wp_google-googlesettings&ract=del&place=".urlencode($key)."&placeid=".urlencode($tempfoundplaceid)."&type=crawl'>Delete</a>
+		<a class='w3-button w3-green w3-padding-small' href='".$urlgooglegooglecrawl."&ract=edit&place=".urlencode($key)."&placeid=".urlencode($tempfoundplaceid)."'>Get Reviews</a>
+		&nbsp;<img class='buttonloader2 loadinggifchoosepage' width='20' height='20' src='".plugin_dir_url( __FILE__ )."loading.gif' style='display:none;'><span class='googletestresults2'></span>
 		</td></tr>";
 	}
 }
@@ -144,12 +253,21 @@ foreach ($googleapisarray as $key =>$savedplace) {
 		$tempfoundplaceid ="";
 		$nhful="";
 
-				$tempbusiness = $savedplace['google_location_set']['location'];
-				$tempfoundplaceid = $savedplace['google_location_set']['place_id'];
+				$tempbusiness = stripslashes($savedplace['google_location_set']['location'] ?? '');
+				$tempfoundplaceid = stripslashes($savedplace['google_location_set']['place_id'] ?? '');
 				
 
 		$nhful = $savedplace['google_location_sort'];
-		echo "<tr><td> ".$tempbusiness ."</td><td>".$tempfoundplaceid."</td><td> Places API : ".$savedplace['google_location_sort'] ."</td><td> 
+		// Apply character limit to place ID before creating link
+		$tempfoundplaceid = limit_text($tempfoundplaceid);
+		$placeid_link = '';
+		if($tempfoundplaceid != '' && strpos($tempfoundplaceid, 'ChIJ') === 0) {
+			$placeid_link = '<a href="https://search.google.com/local/reviews?placeid='.urlencode($tempfoundplaceid).'" target="_blank" style="color: #1976d2; text-decoration: none;">'.$tempfoundplaceid.'</a>';
+		} else {
+			$placeid_link = $tempfoundplaceid;
+		}
+		
+		echo "<tr><td> ".limit_text($tempbusiness) ."</td><td>".$placeid_link."</td><td> Places API : ".$savedplace['google_location_sort'] ."</td><td> 
 		<a class='w3-button w3-red w3-padding-small' href='?page=wp_google-googlesettings&ract=del&place=".urlencode($key)."&placeid=".urlencode($tempfoundplaceid)."&type=api'>Delete</a>
 		<a class='w3-button w3-dark-grey w3-padding-small' href='".$urlgoogleapi."&ract=edit&placeid=".urlencode($key)."'>Edit</a>
 		<a onclick='getgooglereviewsfunction(\"".$key."\")' class='w3-button w3-green w3-padding-small' data-type='api' data-placeid='".$key."' data-place='".urlencode($tempbusiness)."' data-nhful='".urlencode($nhful)."'>Download Reviews</a>&nbsp;<img class='buttonloader2 loadinggifchoosepage' width='20' height='20' src='".plugin_dir_url( __FILE__ )."loading.gif' style='display:none;'><span class='googletestresults2'></span>
@@ -193,7 +311,7 @@ foreach ($googleapisarray as $key =>$savedplace) {
 	</header>
 	<div class="w3-container">
 	<h5>Pros:</h5>
-	  <p>- Will download your Newest 40 or Most Relevant 40 reviews.</p>
+	  <p>- Will download your Newest 20 or Most Relevant 20 reviews.</p>
 	  <p>- Will also download user images on reviews.</p>
 	  <p>- No API Key required.</p>
 	  <p>- Can also work for service area businesses.</p>
