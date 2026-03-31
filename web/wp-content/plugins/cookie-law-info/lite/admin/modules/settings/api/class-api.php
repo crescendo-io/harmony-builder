@@ -50,6 +50,47 @@ class Api extends Rest_Controller {
 		add_action( 'rest_api_init', array( $this, 'register_routes' ), 10 );
 	}
 	/**
+	 * Helper method to register simple POST routes.
+	 *
+	 * @param string $endpoint The endpoint path.
+	 * @param string $callback The callback method name.
+	 * @return void
+	 */
+	private function register_post_route( $endpoint, $callback ) {
+		register_rest_route(
+			$this->namespace,
+			'/' . $this->rest_base . '/' . $endpoint,
+			array(
+				array(
+					'methods'             => WP_REST_Server::CREATABLE,
+					'callback'            => array( $this, $callback ),
+					'permission_callback' => array( $this, 'create_item_permissions_check' ),
+					'args'                => $this->get_collection_params(),
+				),
+			)
+		);
+	}
+
+	/**
+	 * Helper method for simple controller method calls with JSON data and error handling.
+	 *
+	 * @param WP_REST_Request $request Full details about the request.
+	 * @param string $method_name The controller method name to call.
+	 * @param bool $use_json_params Whether to use JSON params (default: true).
+	 * @return WP_Error|WP_REST_Response
+	 */
+	private function call_controller_method( $request, $method_name, $use_json_params = true ) {
+		$data = $use_json_params ? $request->get_json_params() : array();
+		$response = Controller::get_instance()->{$method_name}( $data );
+
+		if ( is_wp_error( $response ) ) {
+			return $response;
+		}
+
+		return rest_ensure_response( $response );
+	}
+
+	/**
 	 * Register the routes for cookies.
 	 *
 	 * @return void
@@ -213,6 +254,7 @@ class Api extends Rest_Controller {
 				),
 			)
 		);
+		$this->register_post_route( 'payments', 'add_payments' );
 	}
 	/**
 	 * Get a collection of items.
@@ -587,6 +629,16 @@ class Api extends Rest_Controller {
 		);
 
 		return $this->add_additional_fields_schema( $schema );
+	}
+
+	/**
+	 * Add payments/subscription.
+	 *
+	 * @param WP_REST_Request $request Full details about the request.
+	 * @return WP_Error|WP_REST_Response
+	 */
+	public function add_payments( $request ) {
+		return $this->call_controller_method( $request, 'add_payments' );
 	}
 
 } // End the class.
